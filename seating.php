@@ -5,7 +5,9 @@
 	<h2><?= $table['table_name']; ?> (<?= $guestsOnTable ?>)</h2>
 		<ul>
 		<?php foreach (getTable($table['table_id']) as $guest): ?>
-			<li><?= $guest['first_name'].' '.$guest['last_name']; ?></li>
+			<li>
+				<a href="guest.php?guestId=<?= $guest['guest_id']; ?>"><?= $guest['first_name'].' '. $guest['last_name']; ?></a>
+			</li>
 		<?php endforeach; ?>
 	</ul>
 <?php endforeach; ?>
