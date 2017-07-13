@@ -1,0 +1,22 @@
+SCHEMA
+---
+
+guests
+	> guest_id (int)
+	> first_name (str)
+	> last_name (str)
+	> is_child (bool)
+	> is_invited_day (bool)
+	> is_invited_evening (bool)
+	> is_top_table (bool)
+
+rsvp
+	> guest_id (int)
+	> rsvp_received (bool)
+	> is_attending_day (bool)
+	> is_attending_evening (bool)
+
+meals
+	> guest_id (int)
+	> meal_choice (int - mapped to meal choice details)
+	> dietary_requirements (str)
