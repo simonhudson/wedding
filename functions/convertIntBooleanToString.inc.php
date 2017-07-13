@@ -1,6 +1,6 @@
 <?php
 	function convertIntBooleanToString($value) {
-		if ($value) return 'Yes';
-		else return 'No';
+		if ($value) return 'True';
+		else return 'false';
 	}
 ?>
