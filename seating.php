@@ -2,7 +2,7 @@
 <h1>Seating</h1>
 <?php foreach (getTables() as $table): ?>
 	<?php $guestsOnTable = mysqli_num_rows(getTable($table['table_id'])); ?>
-	<h2><?= $table['table_name']; ?> (<?= $guestsOnTable ?>)</h2>
+	<h2 id="table-<?= $table['table_id'] ?>"><?= $table['table_name']; ?> (<?= $guestsOnTable ?>)</h2>
 		<ul>
 		<?php foreach (getTable($table['table_id']) as $guest): ?>
 			<li>

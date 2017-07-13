@@ -25,7 +25,7 @@
 				<td headers="is_invited_day"><?= convertIntBooleanToYesNo($guest['is_invited_day']); ?></td>
 				<td headers="is_invited_evening"><?= convertIntBooleanToYesNo($guest['is_invited_evening']); ?></td>
 				<td headers="is_child"><?= convertIntBooleanToYesNo($guest['is_child']); ?></td>
-				<td headers="seating"><?= $guest['table_name']; ?></td>
+				<td headers="seating"><a href="seating.php#table-<?= $guest['table_id']; ?>"><?= $guest['table_name']; ?></a></td>
 				<td headers="meal"><?= $guest['meal_description']; ?></td>
 			</tr>
 	</table>
