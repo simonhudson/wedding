@@ -22,9 +22,9 @@
 				<td headers="guest_id"><?= $guest['guest_id']; ?></td>
 				<td headers="guest_name"><?= $guest['first_name']. ' '. $guest['last_name']; ?></td>
 				<td headers="relationship"><?= $guest['relationship']; ?></td>
-				<td headers="is_invited_day"><?= convertIntBooleanToString($guest['is_invited_day']); ?></td>
-				<td headers="is_invited_evening"><?= convertIntBooleanToString($guest['is_invited_evening']); ?></td>
-				<td headers="is_child"><?= convertIntBooleanToString($guest['is_child']); ?></td>
+				<td headers="is_invited_day"><?= convertIntBooleanToYesNo($guest['is_invited_day']); ?></td>
+				<td headers="is_invited_evening"><?= convertIntBooleanToYesNo($guest['is_invited_evening']); ?></td>
+				<td headers="is_child"><?= convertIntBooleanToYesNo($guest['is_child']); ?></td>
 				<td headers="seating"><?= $guest['table_name']; ?></td>
 				<td headers="meal"><?= $guest['meal_description']; ?></td>
 			</tr>
