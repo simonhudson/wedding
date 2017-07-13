@@ -4,9 +4,9 @@
 		include('includes/db.inc.php');
 
 		$query_getTable =
-		"SELECT name
-		FROM seating
-		WHERE seating.table_id=$tableId";
+		"SELECT *
+		FROM guest
+		WHERE guest.table_id=$tableId";
 
 		mysqli_query($db, $query_getTable) or die('Error querying database. [getTable]');
 
