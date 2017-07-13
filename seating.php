@@ -1,6 +1,6 @@
 <?php include('layout/precontent.inc.php'); ?>
 <h1>Seating</h1>
-<?php foreach (getSeating() as $table): ?>
+<?php foreach (getTables() as $table): ?>
 	<?php $guestsOnTable = mysqli_num_rows(getTable($table['table_id'])); ?>
 	<h2><?= $table['table_name']; ?> (<?= $guestsOnTable ?>)</h2>
 		<ul>
