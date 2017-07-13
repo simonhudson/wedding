@@ -3,7 +3,6 @@
 <?php $guestId = $_GET['guestId']; ?>
 
 <?php foreach (getGuest($guestId) as $guest): ?>
-	<?php $tableId = $guest['seating']; ?>
 	<table>
 		<thead>
 			<tr>
@@ -13,7 +12,8 @@
 				<th id="is_invited_day">Day invite</th>
 				<th id="is_invited_evening">Evening invite</th>
 				<th id="is_child">Child</th>
-				<th id="table">Table</th>
+				<th id="seating">Seating</th>
+				<th id="meal">Meal</th>
 			</tr>
 		</thead>
 			<tr>
@@ -23,7 +23,8 @@
 				<td headers="is_invited_day"><?= convertIntBooleanToString($guest['is_invited_day']); ?></td>
 				<td headers="is_invited_evening"><?= convertIntBooleanToString($guest['is_invited_evening']); ?></td>
 				<td headers="is_child"><?= convertIntBooleanToString($guest['is_child']); ?></td>
-				<td headers="table"><?= $guest['table_id']; ?></td>
+				<td headers="seating"><?= $guest['table_name']; ?></td>
+				<td headers="meal"><?= $guest['meal_description']; ?></td>
 			</tr>
 	</table>
 <?php endforeach; ?>
