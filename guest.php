@@ -23,7 +23,7 @@
 				<td headers="is_invited_day"><?= convertIntBooleanToString($guest['is_invited_day']); ?></td>
 				<td headers="is_invited_evening"><?= convertIntBooleanToString($guest['is_invited_evening']); ?></td>
 				<td headers="is_child"><?= convertIntBooleanToString($guest['is_child']); ?></td>
-				<td headers="table">foo</td>
+				<td headers="table"><?= $guest['table_id']; ?></td>
 			</tr>
 	</table>
 <?php endforeach; ?>

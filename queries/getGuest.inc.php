@@ -6,8 +6,10 @@
 		$query_getGuest =
 		"SELECT *
 		FROM guest
+		INNER JOIN seating
+		ON guest.seating = seating.table_id
 		WHERE guest.guest_id=$guestId";
-		
+
 		mysqli_query($db, $query_getGuest) or die('Error querying database. [getGuest]');
 
 		$result_getGuest = mysqli_query($db, $query_getGuest);
