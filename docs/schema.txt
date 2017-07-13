@@ -1,7 +1,7 @@
 SCHEMA
 ---
 
-guests
+guest
 	> guest_id (int)
 	> first_name (str)
 	> last_name (str)
@@ -16,7 +16,7 @@ rsvp
 	> is_attending_day (bool)
 	> is_attending_evening (bool)
 
-meals
+meal
 	> guest_id (int)
-	> meal_choice (int - mapped to meal choice details)
+	> meal_choice (str)
 	> dietary_requirements (str)
