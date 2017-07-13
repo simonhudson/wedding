@@ -3,7 +3,10 @@
 
 		include('includes/db.inc.php');
 
-		$query_getSeating = "SELECT * FROM seating";
+		$query_getSeating =
+		"SELECT *
+		FROM seating";
+		
 		mysqli_query($db, $query_getSeating) or die('Error querying database. [getSeating]');
 
 		$result_getSeating = mysqli_query($db, $query_getSeating);

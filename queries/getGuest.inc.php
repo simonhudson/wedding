@@ -3,7 +3,11 @@
 
 		include('includes/db.inc.php');
 
-		$query_getGuest = "SELECT * FROM guest WHERE guest_id=$guestId";
+		$query_getGuest =
+		"SELECT *
+		FROM guest
+		WHERE guest.guest_id=$guestId";
+		
 		mysqli_query($db, $query_getGuest) or die('Error querying database. [getGuest]');
 
 		$result_getGuest = mysqli_query($db, $query_getGuest);
