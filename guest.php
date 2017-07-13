@@ -2,6 +2,8 @@
 
 <?php $guestId = $_GET['guestId']; ?>
 
+<h1>Guest</h1>
+
 <?php foreach (getGuest($guestId) as $guest): ?>
 	<table>
 		<thead>

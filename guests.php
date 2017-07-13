@@ -1,5 +1,5 @@
 <?php include('layout/precontent.inc.php'); ?>
-
+<h1>Guests</h1>
 <ul>
 	<?php foreach (getGuests() as $guest): ?>
 		<li>
