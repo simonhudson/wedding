@@ -5,7 +5,7 @@
 <h1>Guest</h1>
 
 <?php foreach (getGuest($guestId) as $guest): ?>
-	<table>
+	<table class="table table-striped">
 		<thead>
 			<tr>
 				<th id="guest_name">Name</th>
