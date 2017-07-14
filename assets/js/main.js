@@ -20,7 +20,7 @@ function doFilter() {
 		showElement(row);
 		var dataCell = row.querySelector('[headers="' + filterBy + '"]');
 		if (dataCell) {
-			var cellValue = rowFilter.textContent;
+			var cellValue = dataCell.textContent;
 			if (cellValue !== filterValue) hideElement(row);
 		}
 	});
