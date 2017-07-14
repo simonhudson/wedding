@@ -37,10 +37,16 @@ function liveSearch() {
 		if (inputValue) {
 			showElement(row);
 			var dataCell = row.querySelector('[headers="' + searchOn + '"]');
+			var cellValue = dataCell.textContent;
+			var inputValueRegex = new RegExp(inputValue, 'gi');
+			dataCell.innerHTML = dataCell.textContent;
 			if (dataCell) {
-				var cellValue = dataCell.textContent;
-				if (cellValue.toLowerCase().indexOf(inputValue.toLowerCase()) < 0) hideElement(row);
-				else showElement(row);
+				if (cellValue.match(inputValueRegex)) {
+					showElement(row);
+				}
+				else {
+					hideElement(row);
+				}
 			}
 		} else {
 			showElement(row);
