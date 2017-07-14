@@ -18,8 +18,11 @@ function doFilter() {
 	// Loop through the table rows
 	dataRows.forEach(function(row) {
 		showElement(row);
-		var rowValue = row.querySelector('[headers="' + filterBy + '"]').textContent;
-		if (rowValue !== filterValue) hideElement(row);
+		var rowFilter = row.querySelector('[headers="' + filterBy + '"]');
+		if (rowFilter) {
+			var rowValue = rowFilter.textContent;
+			if (rowValue !== filterValue) hideElement(row);
+		}
 	});
 
 };

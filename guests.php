@@ -13,6 +13,9 @@
 			<option data-filter-by="is_invited_day" value="Yes">Day invite</option>
 			<option data-filter-by="is_invited_evening" value="Yes">Evening invite</option>
 			<option data-filter-by="is_child" value="Yes">Children</option>
+			<option data-filter-by="meal" value="Chicken">Chicken</option>
+			<option data-filter-by="meal" value="Fish">Fish</option>
+			<option data-filter-by="meal" value="Vegetarian">Vegetarian</option>
 		</select>
 	</div>
 </div>
