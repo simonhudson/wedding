@@ -4,21 +4,30 @@
 
 <?= pageHeader('Guests ('.$totalInvitedGuests.')'); ?>
 
-<div class="row">
-	<div class="col-xs-2">
-		<select class="form-control js-filter" data-data-source="guests-table">
-			<option>Filter by</option>
-			<option data-filter-by="relationship" value="Family">Family</option>
-			<option data-filter-by="relationship" value="Friend">Friend</option>
-			<option data-filter-by="is_invited_day" value="Yes">Day invite</option>
-			<option data-filter-by="is_invited_evening" value="Yes">Evening invite</option>
-			<option data-filter-by="is_child" value="Yes">Children</option>
-			<option data-filter-by="meal" value="Chicken">Chicken</option>
-			<option data-filter-by="meal" value="Fish">Fish</option>
-			<option data-filter-by="meal" value="Vegetarian">Vegetarian</option>
-		</select>
-	</div>
-</div>
+
+		<div class="form-inline">
+			<div class="form-group">
+				<label for="guests-filter">Filter</label>
+				<select class="form-control js-filter" data-data-source="guests-table" id="guests-filter">
+					<option>Show all</option>
+					<optgroup label="Relationship">
+						<option data-filter-by="relationship" value="Family">Family</option>
+						<option data-filter-by="relationship" value="Friend">Friend</option>
+						<option data-filter-by="is_child" value="Yes">Children</option>
+					</optgroup>
+					<optgroup label="Invitation">
+						<option data-filter-by="is_invited_day" value="Yes">Day invite</option>
+						<option data-filter-by="is_invited_evening" value="Yes">Evening invite</option>
+					</optgroup>
+					<optgroup label="Meal choice">
+						<option data-filter-by="meal" value="Chicken">Chicken</option>
+						<option data-filter-by="meal" value="Fish">Fish</option>
+						<option data-filter-by="meal" value="Vegetarian">Vegetarian</option>
+					</optgroup>
+				</select>
+			</div>
+		</div>
+
 
 <table class="table table-striped guests-table">
 	<thead>
