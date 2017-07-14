@@ -8,7 +8,6 @@
 	<table>
 		<thead>
 			<tr>
-				<th id="guest_id"></th>
 				<th id="guest_name">Name</th>
 				<th id="relationship">Relationship</th>
 				<th id="is_invited_day">Day invite</th>
@@ -19,7 +18,6 @@
 			</tr>
 		</thead>
 			<tr>
-				<td headers="guest_id"><?= $guest['guest_id']; ?></td>
 				<td headers="guest_name"><?= $guest['first_name']. ' '. $guest['last_name']; ?></td>
 				<td headers="relationship"><?= $guest['relationship']; ?></td>
 				<td headers="is_invited_day"><?= convertIntBooleanToYesNo($guest['is_invited_day']); ?></td>
