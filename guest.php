@@ -2,7 +2,7 @@
 
 <?php $guestId = $_GET['guestId']; ?>
 
-<h1>Guest</h1>
+<?= pageHeader('Guest'); ?>
 
 <?php foreach (getGuest($guestId) as $guest): ?>
 	<table class="table table-striped">
