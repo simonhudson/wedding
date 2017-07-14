@@ -18,12 +18,33 @@ function doFilter() {
 	// Loop through the table rows
 	dataRows.forEach(function(row) {
 		showElement(row);
-		var rowFilter = row.querySelector('[headers="' + filterBy + '"]');
-		if (rowFilter) {
-			var rowValue = rowFilter.textContent;
-			if (rowValue !== filterValue) hideElement(row);
+		var dataCell = row.querySelector('[headers="' + filterBy + '"]');
+		if (dataCell) {
+			var cellValue = rowFilter.textContent;
+			if (cellValue !== filterValue) hideElement(row);
 		}
 	});
 
 };
 document.querySelector('.js-filter').addEventListener('change', doFilter);
+
+function liveSearch() {
+	var dataSource = document.querySelector('.' + this.dataset.dataSource);
+	var dataRows = Array.from(dataSource.querySelector('tbody').querySelectorAll('tr'));
+	var searchOn = this.dataset.searchOn;
+	var inputValue = this.value;
+	dataRows.forEach(function(row) {
+		if (inputValue) {
+			showElement(row);
+			var dataCell = row.querySelector('[headers="' + searchOn + '"]');
+			if (dataCell) {
+				var cellValue = dataCell.textContent;
+				if (cellValue.toLowerCase().indexOf(inputValue.toLowerCase()) < 0) hideElement(row);
+				else showElement(row);
+			}
+		} else {
+			showElement(row);
+		}
+	});
+}
+document.querySelector('.js-live-search').addEventListener('keyup', liveSearch);
