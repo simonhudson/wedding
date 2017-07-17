@@ -31,7 +31,7 @@
 	</div>
 </div>
 
-<table class="table table-striped guests-table">
+<table class="table guests-table">
 	<thead>
 		<tr>
 			<th id="guest_name">Name</th>
@@ -46,13 +46,13 @@
 	<tbody>
 		<?php foreach (getGuests() as $guest): ?>
 			<tr>
-				<td headers="guest_name"><?= $guest['first_name']. ' '. $guest['last_name']; ?></td>
-				<td headers="relationship"><?= $guest['relationship']; ?></td>
-				<td headers="is_invited_day"><?= convertIntBooleanToYesNo($guest['is_invited_day']); ?></td>
-				<td headers="is_invited_evening"><?= convertIntBooleanToYesNo($guest['is_invited_evening']); ?></td>
-				<td headers="is_child"><?= convertIntBooleanToYesNo($guest['is_child']); ?></td>
-				<td headers="seating"><a href="seating.php#table-<?= $guest['table_id']; ?>"><?= $guest['table_name']; ?></a></td>
-				<td headers="meal"><?= $guest['meal_description']; ?></td>
+				<td headers="guest_name"><?php if (isset($guest['first_name'])): ?><?= $guest['first_name']. ' '. $guest['last_name']; ?><?php endif; ?></td>
+				<td headers="relationship"><?php if (isset($guest['first_name'])): ?><?= $guest['relationship']; ?><?php endif; ?></td>
+				<td headers="is_invited_day"><?php if (isset($guest['first_name'])): ?><?= convertIntBooleanToYesNo($guest['is_invited_day']); ?><?php endif; ?></td>
+				<td headers="is_invited_evening"><?php if (isset($guest['first_name'])): ?><?= convertIntBooleanToYesNo($guest['is_invited_evening']); ?><?php endif; ?></td>
+				<td headers="is_child"><?php if (isset($guest['first_name'])): ?><?= convertIntBooleanToYesNo($guest['is_child']); ?><?php endif; ?></td>
+				<td headers="seating"><?php if (isset($guest['first_name'])): ?><a href="seating.php#table-<?= $guest['table_id']; ?>"><?= $guest['table_name']; ?></a><?php endif; ?></td>
+				<td headers="meal"><?php if (isset($guest['first_name'])): ?><?= $guest['meal_description']; ?><?php endif; ?></td>
 			</tr>
 		<?php endforeach; ?>
 	</tbody>
