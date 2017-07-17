@@ -1,4 +1,5 @@
 <?php
+
 	function getGuest($guestId) {
 
 		include('includes/db.inc.php');

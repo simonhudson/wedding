@@ -1,6 +1,14 @@
-<?php include('layout/precontent.inc.php'); ?>
+<?php
+include('layout/precontent.inc.php');
+
+$tableId = null;
+if (isset($_GET['table'])) {
+	$tableId = $_GET['table'];
+}
+
+?>
 <?= pageHeader('Seating'); ?>
-<?php foreach (getTables() as $table): ?>
+<?php foreach (getTables($tableId) as $table): ?>
 	<?php $guestsOnTable = mysqli_num_rows(getTable($table['table_id'])); ?>
 	<h2 id="table-<?= $table['table_id'] ?>"><?= $table['table_name']; ?> (<?= $guestsOnTable ?>)</h2>
 		<ul>

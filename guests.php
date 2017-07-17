@@ -51,7 +51,7 @@
 				<td headers="is_invited_day"><?php if (isset($guest['first_name'])): ?><?= convertIntBooleanToYesNo($guest['is_invited_day']); ?><?php endif; ?></td>
 				<td headers="is_invited_evening"><?php if (isset($guest['first_name'])): ?><?= convertIntBooleanToYesNo($guest['is_invited_evening']); ?><?php endif; ?></td>
 				<td headers="is_child"><?php if (isset($guest['first_name'])): ?><?= convertIntBooleanToYesNo($guest['is_child']); ?><?php endif; ?></td>
-				<td headers="seating"><?php if (isset($guest['first_name'])): ?><a href="seating.php#table-<?= $guest['table_id']; ?>"><?= $guest['table_name']; ?></a><?php endif; ?></td>
+				<td headers="seating"><?php if (isset($guest['first_name'])): ?><a href="seating.php?table=<?= $guest['table_id']; ?>"><?= $guest['table_name']; ?></a><?php endif; ?></td>
 				<td headers="meal"><?php if (isset($guest['first_name'])): ?><?= $guest['meal_description']; ?><?php endif; ?></td>
 			</tr>
 		<?php endforeach; ?>

@@ -1,11 +1,18 @@
 <?php
-	function getTables() {
+	function getTables($tableId) {
 
 		include('includes/db.inc.php');
 
-		$query_getTables =
-		"SELECT *
-		FROM seating";
+		if ($tableId) {
+			$query_getTables =
+			"SELECT *
+			FROM seating
+			WHERE seating.table_id=$tableId";
+		} else {
+			$query_getTables =
+			"SELECT *
+			FROM seating";
+		}
 
 		mysqli_query($db, $query_getTables) or die('Error querying database. [getTables]');
 
