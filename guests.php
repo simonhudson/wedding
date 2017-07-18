@@ -4,7 +4,7 @@
 
 <?= pageHeader('Guests ('.$totalInvitedGuests.')'); ?>
 
-<div class="form-inline">
+<div class="form-inline well well-lg">
 	<div class="form-group">
 		<label for="guests-filter">Filter</label>
 		<select class="form-control js-filter" data-data-source="guests-table" id="guests-filter">
@@ -19,9 +19,9 @@
 				<option data-filter-by="is_invited_evening" value="Yes">Evening invite</option>
 			</optgroup>
 			<optgroup label="Meal choice">
-				<option data-filter-by="meal" value="Chicken">Chicken</option>
-				<option data-filter-by="meal" value="Fish">Fish</option>
-				<option data-filter-by="meal" value="Vegetarian">Vegetarian</option>
+				<?php foreach (getMeals() as $meal): ?>
+					<option data-filter-by="meal" value="<?= renderData($meal['meal_description']); ?>"><?= renderData($meal['meal_description']); ?></option>
+				<?php endforeach; ?>
 			</optgroup>
 		</select>
 		<div class="form-group">
@@ -46,13 +46,13 @@
 	<tbody>
 		<?php foreach (getGuests() as $guest): ?>
 			<tr>
-				<td headers="guest_name"><?php if (isset($guest['first_name'])): ?><?= $guest['first_name']. ' '. $guest['last_name']; ?><?php endif; ?></td>
-				<td headers="relationship"><?php if (isset($guest['first_name'])): ?><?= $guest['relationship']; ?><?php endif; ?></td>
-				<td headers="is_invited_day"><?php if (isset($guest['first_name'])): ?><?= convertIntBooleanToYesNo($guest['is_invited_day']); ?><?php endif; ?></td>
-				<td headers="is_invited_evening"><?php if (isset($guest['first_name'])): ?><?= convertIntBooleanToYesNo($guest['is_invited_evening']); ?><?php endif; ?></td>
-				<td headers="is_child"><?php if (isset($guest['first_name'])): ?><?= convertIntBooleanToYesNo($guest['is_child']); ?><?php endif; ?></td>
-				<td headers="seating"><?php if (isset($guest['first_name'])): ?><a href="seating.php?table=<?= $guest['table_id']; ?>"><?= $guest['table_name']; ?></a><?php endif; ?></td>
-				<td headers="meal"><?php if (isset($guest['first_name'])): ?><?= $guest['meal_description']; ?><?php endif; ?></td>
+				<td headers="guest_name"><?= renderData($guest['first_name']); ?> <?= renderData($guest['last_name']); ?></td>
+				<td headers="relationship"><?= renderData($guest['relationship']); ?></td>
+				<td headers="is_invited_day"><?= renderData(convertIntBooleanToYesNo($guest['is_invited_day'])); ?></td>
+				<td headers="is_invited_evening"><?= renderData(convertIntBooleanToYesNo($guest['is_invited_evening'])); ?></td>
+				<td headers="is_child"><?= renderData(convertIntBooleanToYesNo($guest['is_child'])); ?></td>
+				<td headers="seating"><a href="seating.php?table=<?= renderData($guest['table_id']); ?>"><?= renderData($guest['table_name']); ?></a></td>
+				<td headers="meal"><?= renderData($guest['meal_description']); ?></td>
 			</tr>
 		<?php endforeach; ?>
 	</tbody>

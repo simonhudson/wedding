@@ -3,4 +3,5 @@
 	include('getGuest.inc.php');
 	include('getTables.inc.php');
 	include('getTable.inc.php');
+	include('getMeals.inc.php');
 ?>
