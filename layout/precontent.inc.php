@@ -15,5 +15,7 @@
 	<body>
 
 		<header class="header">
-			<?php include('includes/main-nav.inc.php'); ?>
+			<div class="wrap">
+				<?php include('includes/main-nav.inc.php'); ?>
+			</div>
 		</header>

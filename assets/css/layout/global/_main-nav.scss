@@ -15,6 +15,7 @@
 		@include padding-xsm();
 		@include strong();
 		border-bottom: 0;
+		color: palette(primary, bodyText);
 	}
 
 }
