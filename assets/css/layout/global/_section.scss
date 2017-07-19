@@ -1,12 +1,26 @@
-section {
+.section {
 	@include padding-sm();
 
 	@include bp(tab-l) {
-		@include padding-y();
+		@include no-padding();
 	}
 
 	&:nth-of-type(2n) {
 		background: rgba(palette(primary, a), 0.15);
+	}
+
+	&__wrap {
+		display: flex;
+	}
+
+	&__item {
+
+		@include bp(tab-l) {
+			@include width-half();
+			@include padding-y();
+			@include padding-x-sm();
+		}
+
 	}
 
 }

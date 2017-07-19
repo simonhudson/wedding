@@ -617,14 +617,22 @@ main {
   font-weight: normal;
   border-bottom: 0; }
 
-section {
+.section {
   padding: 2rem; }
   @media (min-width: 1024px) {
-    section {
-      padding-top: 4rem;
-      padding-bottom: 4rem; } }
-  section:nth-of-type(2n) {
+    .section {
+      padding: 0; } }
+  .section:nth-of-type(2n) {
     background: rgba(124, 238, 206, 0.15); }
+  .section__wrap {
+    display: flex; }
+  @media (min-width: 1024px) {
+    .section__item {
+      width: 50%;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      padding-right: 2rem;
+      padding-left: 2rem; } }
 
 .hero {
   transition: all .5s ease-in-out;

@@ -1,3 +1,5 @@
+@mixin no-padding() { padding:0 }
+
 @mixin padding-xsm() { padding: rem($spacing-xsm); }
 @mixin padding-t-xsm() { padding-top: rem($spacing-xsm); }
 @mixin padding-r-xsm() { padding-right: rem($spacing-xsm); }
