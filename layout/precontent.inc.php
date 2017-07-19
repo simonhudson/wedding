@@ -2,7 +2,7 @@
 <?php include('functions/__import.inc.php'); ?>
 <?php include('queries/__import.inc.php'); ?>
 <!doctype html>
-<html>
+<html id="top">
 	<head>
 		<title>Wedding</title>
 		<meta charset="utf-8" />
