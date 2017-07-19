@@ -1,6 +1,10 @@
 <?php include('layout/precontent.inc.php'); ?>
 
-<?php $totalInvitedGuests = mysqli_num_rows(getGuests()); ?>
+<?php
+$totalInvitedGuests = mysqli_num_rows(getGuests());
+$numberFamily = mysqli_num_rows(getRelationship('Family'));
+$numberFriend = mysqli_num_rows(getRelationship('Friend'));
+?>
 
 <?= pageHeader('Guests ('.$totalInvitedGuests.')'); ?>
 
@@ -10,8 +14,8 @@
 		<select class="form-control js-filter" data-data-source="guests-table" id="guests-filter">
 			<option>Show all</option>
 			<optgroup label="Relationship">
-				<option data-filter-by="relationship" value="Family">Family</option>
-				<option data-filter-by="relationship" value="Friend">Friend</option>
+				<option data-filter-by="relationship" value="Family">Family&nbsp;(<?= $numberFamily; ?>)</option>
+				<option data-filter-by="relationship" value="Friend">Friend&nbsp;(<?= $numberFriend; ?>)</option>
 				<option data-filter-by="is_child" value="Yes">Children</option>
 			</optgroup>
 			<optgroup label="Invitation">
