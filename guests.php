@@ -4,6 +4,7 @@
 $totalInvitedGuests = mysqli_num_rows(getGuests());
 $numberFamily = mysqli_num_rows(getRelationship('Family'));
 $numberFriend = mysqli_num_rows(getRelationship('Friend'));
+$numberChildren = mysqli_num_rows(getChildren());
 ?>
 
 <?= pageHeader('Guests ('.$totalInvitedGuests.')'); ?>
@@ -16,7 +17,7 @@ $numberFriend = mysqli_num_rows(getRelationship('Friend'));
 			<optgroup label="Relationship">
 				<option data-filter-by="relationship" value="Family">Family&nbsp;(<?= $numberFamily; ?>)</option>
 				<option data-filter-by="relationship" value="Friend">Friend&nbsp;(<?= $numberFriend; ?>)</option>
-				<option data-filter-by="is_child" value="Yes">Children</option>
+				<option data-filter-by="is_child" value="Yes">Children&nbsp;(<?= $numberChildren; ?>)</option>
 			</optgroup>
 			<optgroup label="Invitation">
 				<option data-filter-by="is_invited_day" value="Yes">Day invite</option>

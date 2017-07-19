@@ -9,7 +9,7 @@
 		FROM guest
 		WHERE guest.relationship='$relationship'";
 
-		mysqli_query($db, $query_getRelationship) or die('Error querying database [getRelationship].'. $relationship);
+		mysqli_query($db, $query_getRelationship) or die('Error querying database [getRelationship].');
 
 		$result_getRelationship = mysqli_query($db, $query_getRelationship);
 		$row_getRelationship = mysqli_fetch_array($result_getRelationship);

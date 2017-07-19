@@ -5,4 +5,5 @@
 	include('getTable.inc.php');
 	include('getMeals.inc.php');
 	include('getRelationship.inc.php');
+	include('getChildren.inc.php');
 ?>
