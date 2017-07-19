@@ -1,0 +1,65 @@
+.header {
+	@include transition();
+	@include width-full();
+	background: palette(primary, white);
+	border-bottom: 1px solid transparent;
+
+	.has-js & {
+		position: fixed;
+		z-index:index($z-index, 'siteHeader');
+	}
+
+	.is-scrolled & {
+		border-bottom-color: lighten(palette(primary, bodyText), 80%);
+		box-shadow: 0 0 5px palette(primary, bodyText);
+	}
+
+	&__wrap {
+		@include padding-xsm();
+		@include transition();
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+
+		@include bp(tab-p) {
+			@include padding-x-sm();
+		}
+
+	}
+
+	&__logo {
+		@include transition();
+		height: 40px;
+
+		@include bp(tab-p) {
+			height: auto;
+		}
+
+	}
+
+	&__strap {
+		@include strong();
+		@include uppercase();
+		color: palette(primary, a);
+		letter-spacing: 1px;
+		margin-bottom: 0;
+		margin-left: rem($base-font-size);
+
+		span {
+			@include visuallyhidden();
+			color: palette(primary, bodyText);
+
+			@include bp(tab-p) {
+				@include visuallyshown();
+			}
+
+		}
+
+		em {
+			@include flourish();
+			text-transform: lowercase;
+		}
+
+	}
+
+}

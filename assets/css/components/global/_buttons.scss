@@ -1,0 +1,62 @@
+// Buttons
+//
+// Button styles
+//
+// Markup:
+// <a class="btn {{modifier_class}}">Link Button</a>
+// <button class="btn {{modifier_class}}">Button Element</button>
+// <input class="btn {{modifier_class}}" type="button" value="Input Button" />
+//
+// .btn--secondary - Secondary button.
+// .btn--has-icon - Button with icon.
+// .btn--is-hollow - Hollow button.
+//
+// Styleguide Buttons
+
+.btn {
+	@include margin-b-sm();
+	@include padding-xsm();
+	@include strong();
+	@include transition();
+	@include uppercase();
+	@include width-full();
+	background-color: palette(primary, a);
+	border-radius:3px;
+	border:0;
+	color:#fff;
+	cursor:pointer;
+	display:inline-block;
+	font-weight: 500;
+	line-height: rem($base-font-size);
+	vertical-align: top;
+
+	@include bp(tab-p) {
+		width:auto;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: darken(palette(primary, a), 10%);
+		color:#fff;
+		text-decoration: none;
+	}
+
+	&--is-hollow {
+		background-color: palette(primary, white);
+		border: 1px solid palette(primary, a);
+		color: palette(primary, a);
+	}
+
+	&--has-icon {
+		background-image: url($img-path + 'arrow-white-right.svg');
+		background-position: right 10px center;
+		background-repeat: no-repeat;
+		background-size:rem($base-font-size * 1.4);
+		padding-right:rem(45px);
+	}
+
+	&--secondary {
+		background: palette(primary, a-alt);
+	}
+
+}
