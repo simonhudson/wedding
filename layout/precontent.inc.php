@@ -14,5 +14,6 @@
 	</head>
 	<body>
 
-		<div class="container">
-			<?php include('includes/main-nav.inc.php');
+		<header class="header">
+			<?php include('includes/main-nav.inc.php'); ?>
+		</header>

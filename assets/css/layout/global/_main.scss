@@ -18,9 +18,11 @@ main {
 }
 
 .wrap {
+	
 	@include bp(tab-l) {
-		@include width-full();
+		@include width-full--desktop();
 		margin-right: auto;
 		margin-left: auto;
 	}
+
 }

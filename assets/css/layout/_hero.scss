@@ -1,0 +1,10 @@
+.hero {
+	@include transition();
+	background: #efefef;
+	height: 200px;
+
+	@include bp(tab-l) {
+		height: 400px;
+	}
+
+}

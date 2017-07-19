@@ -1,8 +1,10 @@
 .header {
+	@include padding-sm();
 	@include transition();
 	@include width-full();
 	background: palette(primary, white);
-	border-bottom: 1px solid transparent;
+	border-bottom: 1px solid lighten(palette(primary, bodyText), 60%);
+	display: flex;
 
 	.has-js & {
 		position: fixed;
@@ -10,7 +12,6 @@
 	}
 
 	.is-scrolled & {
-		border-bottom-color: lighten(palette(primary, bodyText), 80%);
 		box-shadow: 0 0 5px palette(primary, bodyText);
 	}
 

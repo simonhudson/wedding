@@ -1,0 +1,12 @@
+section {
+	@include padding-sm();
+
+	@include bp(tab-l) {
+		@include padding-y();
+	}
+
+	&:nth-of-type(2n) {
+		background: rgba(palette(primary, a), 0.15);
+	}
+
+}
