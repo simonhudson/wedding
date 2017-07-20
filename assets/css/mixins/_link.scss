@@ -1,11 +1,10 @@
 @mixin link {
 	@include transition();
 	border-bottom: 1px dotted #ebebeb;
-	color: palette(primary, a);
+	color: darken(palette(primary, a), 40%);
 	text-decoration:none;
 
 	&:hover, &:focus {
-		color: palette(primary, a);
 		border-color: palette(primary, a);
 		text-decoration: none;
 	}

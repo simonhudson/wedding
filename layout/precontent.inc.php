@@ -16,9 +16,11 @@
 
 		<header class="header">
 			<div class="wrap header__wrap">
-				<div class="logo">
-					<img alt="" src="http://via.placeholder.com/200x50" />
+				<div class="header__logo">
+					<img alt="" src="http://via.placeholder.com/200x75" />
 				</div>
-				<?php include('includes/main-nav.inc.php'); ?>
+				<div class="header__nav">
+					<?php include('includes/main-nav.inc.php'); ?>
+				</div>
 			</div>
 		</header>

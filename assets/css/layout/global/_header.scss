@@ -1,5 +1,4 @@
 .header {
-	@include padding-sm();
 	@include transition();
 	@include width-full();
 	background: palette(primary, white);
@@ -21,6 +20,7 @@
 		align-items: center;
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
 
 		@include bp(tab-p) {
 			@include padding-x-sm();
