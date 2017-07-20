@@ -624,20 +624,15 @@ main {
   padding: 2rem; }
   @media (min-width: 1024px) {
     .section {
-      padding: 0; } }
+      padding: 0;
+      padding-top: 4rem;
+      padding-bottom: 4rem; } }
   .section:nth-of-type(2n) {
     background: rgba(124, 238, 206, 0.15); }
-    .section:nth-of-type(2n) .section__wrap {
-      flex-direction: row-reverse; }
-  .section__wrap {
-    display: flex; }
   @media (min-width: 1024px) {
-    .section__item {
+    .section__wrap {
       width: 50%;
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-      padding-right: 2rem;
-      padding-left: 2rem; } }
+      margin: 0 auto; } }
 
 .hero {
   transition: all .5s ease-in-out;
