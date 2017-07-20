@@ -1,9 +1,30 @@
 .main-nav {
 
+	.has-js & {
+
+		@include bp(tab-l) {
+			display: block;
+
+			&__toggle {
+				display: none;
+			}
+
+		}
+	}
+
 	&__list {
-		display:flex;
 		margin: 0;
 		padding:0;
+
+		@include bp(tab-l) {
+			display:flex;
+		}
+
+	}
+
+	&__toggle {
+		@include position-tr($spacing-sm);
+		display: block;
 	}
 
 	&__item {
@@ -12,15 +33,20 @@
 	}
 
 	&__link {
-		@include padding-sm();
+		@include padding-y-xsm();
 		@include strong();
-		border-bottom: 3px solid transparent;
+		border-bottom: 1px solid rgba(palette(primary, bodyText), .15);
 		color: palette(primary, bodyText);
+		display:block;
 
 		&:hover,
 		&:focus {
 			color: palette(primary, bodyText);
 			border-bottom-color: palette(primary, a);
+		}
+
+		@include bp(tab-l) {
+			@include padding-sm();
 		}
 
 	}

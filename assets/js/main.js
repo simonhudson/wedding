@@ -1,12 +1,33 @@
 'use strict';
 
+function hasJs() {
+	document.querySelector('html').classList.add('has-js');
+};
+hasJs();
+
 function showElement(element) {
-	element.classList.remove('sr-only');
+	element.classList.remove('visuallyhidden');
 }
 
 function hideElement(element) {
-	element.classList.add('sr-only');
+	element.classList.add('visuallyhidden');
 }
+
+function setMainNav() {
+	var nav = document.querySelector('.js-main-nav');
+	nav.classList.add('visuallyhidden');
+}
+setMainNav();
+
+function toggleMainNav(e) {
+	e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+	var nav = document.querySelector('.js-main-nav');
+	if (nav) {
+		nav.classList.contains('visuallyhidden') ? showElement(nav) : hideElement(nav);
+	}
+}
+var navToggle = document.querySelector('.js-main-nav__toggle');
+if (navToggle) navToggle.addEventListener('click', toggleMainNav);
 
 function doFilter() {
 	var dataSource = document.querySelector('.' + this.dataset.dataSource);
@@ -26,7 +47,8 @@ function doFilter() {
 	});
 
 };
-document.querySelector('.js-filter').addEventListener('change', doFilter);
+var filter = document.querySelector('.js-filter');
+if (filter) filter.addEventListener('change', doFilter);
 
 function liveSearch() {
 	var dataSource = document.querySelector('.' + this.dataset.dataSource);
@@ -53,4 +75,5 @@ function liveSearch() {
 		}
 	});
 }
-document.querySelector('.js-live-search').addEventListener('keyup', liveSearch);
+var liveSearch = document.querySelector('.js-live-search');
+if (liveSearch) liveSearch.addEventListener('keyup', liveSearch);

@@ -5,32 +5,27 @@
 	border-bottom: 1px solid lighten(palette(primary, bodyText), 60%);
 	display: flex;
 
-	.has-js & {
-		position: fixed;
-		z-index:index($z-index, 'siteHeader');
-	}
-
-	.is-scrolled & {
-		box-shadow: 0 0 5px palette(primary, bodyText);
-	}
-
 	&__wrap {
+		@include width-full();
 		@include padding-xsm();
 		@include transition();
-		align-items: center;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		position: relative;
 
 		@include bp(tab-p) {
 			@include padding-x-sm();
+		}
+
+		@include bp(tab-l) {
+			align-items: center;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
 		}
 
 	}
 
 	&__logo {
 		@include transition();
-		height: 40px;
 
 		@include bp(tab-p) {
 			height: auto;

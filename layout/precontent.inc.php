@@ -19,8 +19,9 @@
 				<div class="header__logo">
 					<img alt="" src="http://via.placeholder.com/200x75" />
 				</div>
-				<div class="header__nav">
-					<?php include('includes/main-nav.inc.php'); ?>
-				</div>
+				<button class="js-main-nav__toggle main-nav__toggle">
+					Menu
+				</button>
+				<?php include('includes/main-nav.inc.php'); ?>
 			</div>
 		</header>
