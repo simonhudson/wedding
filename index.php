@@ -1,7 +1,6 @@
 <?php include('layout/precontent.inc.php'); ?>
 
-	<div class="hero">
-	</div>
+	<?php include('includes/hero.inc.php'); ?>
 
 	<?php foreach($sections as $section): ?>
 		<section class="section" id="<?= $section->slug; ?>">

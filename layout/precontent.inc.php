@@ -4,7 +4,7 @@
 <!doctype html>
 <html id="top">
 	<head>
-		<title>Wedding</title>
+		<title><?= $sitename; ?> &mdash; <?= formatDateTime(); ?></title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link href="<?= $paths->libs; ?>font-awesome/css/font-awesome.min.css" rel="stylesheet" />
