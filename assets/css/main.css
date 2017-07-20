@@ -247,17 +247,16 @@ select {
   background-size: 9px 6px;
   padding-right: 1.5rem; }
 
-@media (min-width: 1024px) {
-  .input-row {
-    padding-bottom: 1rem;
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap; }
-    .input-row__item {
-      flex-grow: 1;
-      margin-right: 28px; }
-      .input-row__item:last-of-type {
-        margin-right: 0; } }
+.input-row {
+  padding-bottom: 1rem;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap; }
+  .input-row__item {
+    flex-grow: 1;
+    margin-right: 28px; }
+    .input-row__item:last-of-type {
+      margin-right: 0; }
 
 .input-error {
   background: rgba(255, 0, 0, 0.05);

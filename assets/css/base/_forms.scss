@@ -114,21 +114,17 @@ select {
 }
 
 .input-row {
+	@include padding-b-xsm();
+	align-items: center;
+	display:flex;
+	flex-wrap: wrap;
 
-	@include bp(tab-l) {
-		@include padding-b-xsm();
-		align-items: center;
-		display:flex;
-		flex-wrap: wrap;
+	&__item {
+		flex-grow: 1;
+		margin-right: $spacing-sm;
 
-		&__item {
-			flex-grow: 1;
-			margin-right: $spacing-sm;
-
-			&:last-of-type {
-				margin-right:0;
-			}
-
+		&:last-of-type {
+			margin-right:0;
 		}
 
 	}
