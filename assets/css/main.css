@@ -650,7 +650,8 @@ main {
     border-bottom-color: #7ceece; }
   @media (min-width: 1024px) {
     .main-nav__link {
-      padding: 2rem; } }
+      padding: 2rem;
+      border-bottom-color: transparent; } }
 
 .section {
   padding: 2rem;

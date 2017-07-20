@@ -48,6 +48,7 @@
 
 		@include bp(tab-l) {
 			@include padding-sm();
+			border-bottom-color: transparent;
 		}
 
 	}
