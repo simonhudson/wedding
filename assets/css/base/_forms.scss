@@ -96,10 +96,10 @@ select {
 }
 
 textarea {
+	height: rem($base-font-size * 8);
 
 	@include bp(tab-p) {
 		@include width-two-thirds();
-		height: rem($base-font-size * 8);
 	}
 
 }
