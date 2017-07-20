@@ -13,17 +13,13 @@ function hideElement(element) {
 	element.classList.add('visuallyhidden');
 }
 
-function setMainNav() {
-	var nav = document.querySelector('.js-main-nav');
-	nav.classList.add('visuallyhidden');
-}
-setMainNav();
-
 function toggleMainNav(e) {
 	e.preventDefault ? e.preventDefault() : (e.returnValue = false);
 	var nav = document.querySelector('.js-main-nav');
 	if (nav) {
-		nav.classList.contains('visuallyhidden') ? showElement(nav) : hideElement(nav);
+		var current = nav.style.display;
+		var value = !current || current === 'none' ? 'block' : 'none';
+		nav.style.display = value;
 	}
 }
 var navToggle = document.querySelector('.js-main-nav__toggle');

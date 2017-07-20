@@ -1,6 +1,7 @@
 .main-nav {
 
 	.has-js & {
+		display: none;
 
 		@include bp(tab-l) {
 			display: block;

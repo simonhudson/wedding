@@ -616,11 +616,13 @@ main {
     margin-right: auto;
     margin-left: auto; } }
 
-@media (min-width: 1024px) {
-  .has-js .main-nav {
-    display: block; }
-    .has-js .main-nav__toggle {
-      display: none; } }
+.has-js .main-nav {
+  display: none; }
+  @media (min-width: 1024px) {
+    .has-js .main-nav {
+      display: block; }
+      .has-js .main-nav__toggle {
+        display: none; } }
 .main-nav__list {
   margin: 0;
   padding: 0; }
