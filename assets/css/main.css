@@ -632,7 +632,7 @@ main {
 .main-nav__toggle {
   position: absolute;
   right: 28px;
-  top: 28px;
+  top: 42px;
   display: block; }
 .main-nav__item {
   list-style: none;

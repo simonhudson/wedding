@@ -24,7 +24,7 @@
 	}
 
 	&__toggle {
-		@include position-tr($spacing-sm);
+		@include position-tr($spacing-sm * 1.5, $spacing-sm);
 		display: block;
 	}
 
