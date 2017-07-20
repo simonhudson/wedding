@@ -15,7 +15,10 @@
 	<body>
 
 		<header class="header">
-			<div class="wrap">
+			<div class="wrap header__wrap">
+				<div class="logo">
+					<img alt="" src="http://via.placeholder.com/200x50" />
+				</div>
 				<?php include('includes/main-nav.inc.php'); ?>
 			</div>
 		</header>
