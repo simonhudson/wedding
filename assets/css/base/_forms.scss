@@ -23,7 +23,7 @@
 // Styleguide Forms
 
 fieldset {
-	@include padding-b();
+	@include padding-b-sm();
 	border:0;
 }
 

@@ -27,4 +27,5 @@
 		<label for="rvsp-message">Any other message for the Bride &amp; Groom?</label>
 		<textarea id="rsvp-message"></textarea>
 	</fieldset>
+	<input class="btn btn--primary" type="submit" value="Send" />
 </form>
