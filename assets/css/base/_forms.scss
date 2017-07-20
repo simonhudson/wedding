@@ -82,6 +82,15 @@ select {
 
 }
 
+textarea {
+
+	@include bp(tab-p) {
+		@include width-two-thirds();
+		height: rem($base-font-size * 8);
+	}
+
+}
+
 select {
 	background-image: url($img-path+'caret-grey-down.svg');
 	background-origin: content-box;

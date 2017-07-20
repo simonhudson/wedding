@@ -225,6 +225,11 @@ select {
     border-color: #26478d;
     outline: none; }
 
+@media (min-width: 768px) {
+  textarea {
+    width: 66.66666%;
+    height: 8rem; } }
+
 select {
   background-image: url("_assets/imgs/caret-grey-down.svg");
   background-origin: content-box;
