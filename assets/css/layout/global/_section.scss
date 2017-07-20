@@ -1,22 +1,13 @@
 .section {
 	@include padding-sm();
+	border-bottom: 1px solid rgba(palette(primary, bodyText), .15);
 
 	@include bp(tab-l) {
 		@include no-padding();
 		@include padding-y();
 	}
 
-	&:nth-of-type(2n) {
-		background: rgba(palette(primary, a), 0.15);
-
-		// .section__wrap {
-		// 	flex-direction: row-reverse;
-		// }
-
-	}
-
 	&__wrap {
-		// display: flex;
 
 		@include bp(tab-l) {
 			@include width-half();

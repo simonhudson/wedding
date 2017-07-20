@@ -621,14 +621,13 @@ main {
     border-bottom-color: #7ceece; }
 
 .section {
-  padding: 2rem; }
+  padding: 2rem;
+  border-bottom: 1px solid rgba(87, 87, 87, 0.15); }
   @media (min-width: 1024px) {
     .section {
       padding: 0;
       padding-top: 4rem;
       padding-bottom: 4rem; } }
-  .section:nth-of-type(2n) {
-    background: rgba(124, 238, 206, 0.15); }
   @media (min-width: 1024px) {
     .section__wrap {
       width: 50%;
