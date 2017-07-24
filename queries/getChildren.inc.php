@@ -14,7 +14,10 @@
 		$result_getChildren = mysqli_query($db, $query_getChildren);
 		$row_getChildren = mysqli_fetch_array($result_getChildren);
 
-		return $result_getChildren;
+		return (object) array(
+			'data' => $result_getChildren,
+			'count' => mysqli_num_rows($result_getChildren)
+		);
 
 	}
 

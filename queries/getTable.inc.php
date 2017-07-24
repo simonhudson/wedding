@@ -13,7 +13,10 @@
 		$result_getTable = mysqli_query($db, $query_getTable);
 		$row_getTable = mysqli_fetch_array($result_getTable);
 
-		return $result_getTable;
+		return (object) array(
+			'data' => $result_getTable,
+			'count' => mysqli_num_rows($result_getTable)
+		);
 
 	}
 ?>

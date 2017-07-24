@@ -14,7 +14,10 @@
 		$result_getRelationship = mysqli_query($db, $query_getRelationship);
 		$row_getRelationship = mysqli_fetch_array($result_getRelationship);
 
-		return $result_getRelationship;
+		return (object) array(
+			'data' => $result_getRelationship,
+			'count' => mysqli_num_rows($result_getRelationship)
+		);
 
 	}
 

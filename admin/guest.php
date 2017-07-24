@@ -4,7 +4,7 @@
 
 <?= pageHeader('Guest'); ?>
 
-<?php foreach (getGuest($guestId) as $guest): ?>
+<?php foreach (getGuest($guestId)->data as $guest): ?>
 	<table class="table table-striped">
 		<thead>
 			<tr>

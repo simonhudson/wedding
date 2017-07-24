@@ -13,7 +13,10 @@
 		$result_getDateTime = mysqli_query($db, $query_getDateTime);
 		$row_getDateTime = mysqli_fetch_array($result_getDateTime);
 
-		return $result_getDateTime;
+		return (object) array(
+			'data' => $result_getDateTime,
+			'count' => mysqli_num_rows($result_getDateTime)
+		);
 
 	}
 

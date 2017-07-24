@@ -17,7 +17,7 @@
 		</fieldset>
 		<fieldset>
 			<legend>What would you like to eat?</legend>
-			<?php foreach (getMeals() as $meal): ?>
+			<?php foreach (getMeals()->data as $meal): ?>
 				<div class="input-row">
 					<input id="meal-<?= $meal['meal_id']; ?>" name="rsvp-meal" type="radio" value="<?= $meal['meal_id']; ?>" />
 					<label for="meal-<?= $meal['meal_id']; ?>"><?= $meal['meal_description']; ?></label>

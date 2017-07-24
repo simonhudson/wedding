@@ -19,7 +19,10 @@
 		$result_getTables = mysqli_query($db, $query_getTables);
 		$row_getTables = mysqli_fetch_array($result_getTables);
 
-		return $result_getTables;
+		return (object) array(
+			'data' => $result_getTables,
+			'count' => mysqli_num_rows($result_getTables)
+		);
 
 	}
 ?>

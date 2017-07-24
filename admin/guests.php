@@ -24,7 +24,7 @@ $numberChildren = mysqli_num_rows(getChildren());
 				<option data-filter-by="is_invited_evening" value="Yes">Evening invite</option>
 			</optgroup>
 			<optgroup label="Meal choice">
-				<?php foreach (getMeals() as $meal): ?>
+				<?php foreach (getMeals()->data as $meal): ?>
 					<option data-filter-by="meal" value="<?= renderData($meal['meal_description']); ?>"><?= renderData($meal['meal_description']); ?></option>
 				<?php endforeach; ?>
 			</optgroup>
@@ -49,7 +49,7 @@ $numberChildren = mysqli_num_rows(getChildren());
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach (getGuests() as $guest): ?>
+		<?php foreach (getGuests()->data as $guest): ?>
 			<tr>
 				<td headers="guest_name"><?= renderData($guest['first_name']); ?> <?= renderData($guest['last_name']); ?></td>
 				<td headers="relationship"><?= renderData($guest['relationship']); ?></td>

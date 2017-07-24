@@ -18,7 +18,10 @@
 		$result_getGuests = mysqli_query($db, $query_getGuests);
 		$row_getGuests = mysqli_fetch_array($result_getGuests);
 
-		return $result_getGuests;
+		return (object) array(
+			'data' => $result_getGuests,
+			'count' => mysqli_num_rows($result_getGuests)
+		);
 
 	}
 
