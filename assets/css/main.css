@@ -38,6 +38,10 @@ fieldset {
   padding: 0;
   text-rendering: optimizeLegibility; }
 
+span, strong, em {
+  font-family: inherit;
+  font-size: inherit; }
+
 html {
   color: #575757; }
 
@@ -55,6 +59,9 @@ strong,
 small,
 .small {
   font-size: 0.8rem; }
+
+.script {
+  font-family: "england", serif; }
 
 h1, .faux-h1 {
   color: #575757;
@@ -679,5 +686,16 @@ main {
   @media (min-width: 1024px) {
     .hero {
       height: 400px; } }
+  .hero__text {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center; }
+  .hero__title {
+    text-align: center;
+    font-family: "england", serif;
+    margin: 0; }
+    .hero__title span {
+      display: block; }
 
 /*# sourceMappingURL=main.css.map */

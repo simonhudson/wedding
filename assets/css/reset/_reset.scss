@@ -8,3 +8,8 @@ fieldset {
     padding: 0;
     text-rendering: optimizeLegibility;
 }
+
+span, strong, em {
+    font-family: inherit;
+    font-size: inherit;
+}

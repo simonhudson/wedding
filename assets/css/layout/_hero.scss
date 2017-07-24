@@ -8,6 +8,20 @@
 	}
 
 	&__text {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		justify-content: center;
+	}
+
+	&__title {
+		@include center-text();
+		@include script();
+		@include no-margin();
+
+		span {
+			display: block;
+		}
 
 	}
 

@@ -13,6 +13,10 @@
 	letter-spacing: normal;
 }
 
+@mixin script() {
+	font-family: $base-font-script;
+}
+
 @mixin uppercase() {
 	text-transform: uppercase;
 }
