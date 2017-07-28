@@ -724,7 +724,11 @@ main {
 
 .hero {
   transition: all .5s ease-in-out;
-  background: #efefef;
+  background: url("_assets/imgs/hero.png") no-repeat center 30% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 200px; }
   @media (min-width: 1024px) {
     .hero {

@@ -1,6 +1,10 @@
 .hero {
 	@include transition();
-	background: #efefef;
+	background: url($img-path + 'hero.png') no-repeat center 30% fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	height: 200px;
 
 	@include bp(tab-l) {
