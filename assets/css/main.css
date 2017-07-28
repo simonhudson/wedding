@@ -585,12 +585,17 @@ th {
   border-width: 2px; }
 
 .controls {
+  align-content: space-between;
+  align-items: center;
   display: flex;
-  flex-wrap: wrap;
-  align-content: space-between; }
+  flex-wrap: wrap; }
 
 .control {
+  align-items: center;
+  display: flex;
   flex-grow: 1; }
+  .control label {
+    padding-right: 1rem; }
 
 .header {
   transition: all .5s ease-in-out;

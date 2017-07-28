@@ -1,9 +1,17 @@
 .controls {
+	align-content: space-between;
+	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
-	align-content: space-between;
 }
 
 .control {
+	align-items: center;
+	display: flex;
 	flex-grow: 1;
+
+	label {
+		@include padding-r-xsm();
+	}
+
 }
