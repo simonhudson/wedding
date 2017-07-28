@@ -724,19 +724,36 @@ main {
 
 .hero {
   transition: all .5s ease-in-out;
-  background: url("_assets/imgs/hero.png") no-repeat center 30% fixed;
+  align-items: center;
+  background: url("_assets/imgs/hero.png") no-repeat center 30%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 200px; }
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  position: relative; }
   @media (min-width: 1024px) {
     .hero {
       height: 400px; } }
-  .hero__text {
-    align-items: center;
-    display: flex;
+  .hero:after {
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    background: #fff;
+    content: '';
+    display: block;
     height: 100%;
+    opacity: 0.5; }
+  .hero__text {
+    padding: 2rem;
+    align-items: center;
+    background: #fff;
+    box-shadow: 5px 5px 0 #575757;
+    display: flex;
+    height: 50%;
     justify-content: center; }
   .hero__title {
     text-align: center;
