@@ -9,8 +9,7 @@ if (isset($_GET['table'])) {
 ?>
 <?= pageHeader('Seating'); ?>
 <?php foreach (getTables($tableId)->data as $table): ?>
-	<?php $guestsOnTable = mysqli_num_rows(getTable($table['table_id'])); ?>
-	<h2 id="table-<?= $table['table_id'] ?>"><?= $table['table_name']; ?> (<?= $guestsOnTable ?>)</h2>
+	<h2 id="table-<?= $table['table_id'] ?>"><?= $table['table_name']; ?> (<?= getTable($table['table_id'])->count ?>)</h2>
 		<ul>
 		<?php foreach (getTable($table['table_id'])->data as $guest): ?>
 			<li>

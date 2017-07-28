@@ -556,6 +556,20 @@ select {
   .btn--secondary {
     background: #e65100; }
 
+table {
+  width: 100%;
+  border-collapse: collapse; }
+
+th, td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(87, 87, 87, 0.1);
+  text-align: left; }
+
+th {
+  font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-weight: normal;
+  border-width: 3px; }
+
 .header {
   transition: all .5s ease-in-out;
   width: 100%;

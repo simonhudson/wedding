@@ -1,0 +1,18 @@
+table {
+	@include width-full();
+	border-collapse: collapse;
+}
+
+th, td {
+	@include padding-xsm();
+	border-bottom: 1px solid rgba(palette(primary, bodyText), .10);
+	text-align: left;
+}
+
+th {
+	@include strong();
+	border-width: 3px;
+}
+
+td {
+}

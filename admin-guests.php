@@ -31,10 +31,8 @@
 				<tr>
 					<th id="guest_name">Name</th>
 					<th id="relationship">Relationship</th>
-					<th id="is_invited_day">Day invite</th>
-					<th id="is_invited_evening">Evening invite</th>
 					<th id="is_child">Child</th>
-					<th id="seating">Seating</th>
+					<th id="seating">Table</th>
 					<th id="meal">Meal</th>
 				</tr>
 			</thead>
@@ -43,10 +41,8 @@
 					<tr>
 						<td headers="guest_name"><?= renderData($guest['first_name']); ?> <?= renderData($guest['last_name']); ?></td>
 						<td headers="relationship"><?= renderData($guest['relationship']); ?></td>
-						<td headers="is_invited_day"><?= renderData(convertIntBooleanToYesNo($guest['is_invited_day'])); ?></td>
-						<td headers="is_invited_evening"><?= renderData(convertIntBooleanToYesNo($guest['is_invited_evening'])); ?></td>
 						<td headers="is_child"><?= renderData(convertIntBooleanToYesNo($guest['is_child'])); ?></td>
-						<td headers="seating"><a href="seating.php?table=<?= renderData($guest['table_id']); ?>"><?= renderData($guest['table_name']); ?></a></td>
+						<td headers="seating"><a href="admin-seating.php?table=<?= renderData($guest['table_id']); ?>"><?= renderData($guest['table_id']); ?></a></td>
 						<td headers="meal"><?= renderData($guest['meal_description']); ?></td>
 					</tr>
 				<?php endforeach; ?>
