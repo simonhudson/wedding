@@ -1,19 +1,19 @@
 'use strict';
 
-function hasJs() {
+const hasJs = () => {
 	document.querySelector('html').classList.add('has-js');
 };
 hasJs();
 
-function showElement(element) {
+const showElement = (element) => {
 	element.classList.remove('visuallyhidden');
-}
+};
 
-function hideElement(element) {
+const hideElement = (element) => {
 	element.classList.add('visuallyhidden');
-}
+};
 
-function toggleMainNav(e) {
+const toggleMainNav = (e) => {
 	e.preventDefault ? e.preventDefault() : (e.returnValue = false);
 	var nav = document.querySelector('.js-main-nav');
 	if (nav) {
@@ -21,7 +21,7 @@ function toggleMainNav(e) {
 		var value = !current || current === 'none' ? 'block' : 'none';
 		nav.style.display = value;
 	}
-}
+};
 var navToggle = document.querySelector('.js-main-nav__toggle');
 if (navToggle) navToggle.addEventListener('click', toggleMainNav);
 
@@ -42,7 +42,7 @@ function doFilter() {
 		}
 	});
 
-};
+}
 var filter = document.querySelector('.js-filter');
 if (filter) filter.addEventListener('change', doFilter);
 
@@ -71,5 +71,5 @@ function liveSearch() {
 		}
 	});
 }
-var liveSearch = document.querySelector('.js-live-search');
-if (liveSearch) liveSearch.addEventListener('keyup', liveSearch);
+var liveSearchElement = document.querySelector('.js-live-search');
+if (liveSearchElement) liveSearchElement.addEventListener('keyup', liveSearch);
