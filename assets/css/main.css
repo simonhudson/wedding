@@ -568,7 +568,8 @@ th, td {
 th {
   font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
   font-weight: normal;
-  border-width: 3px; }
+  background: rgba(124, 238, 206, 0.1);
+  border-width: 2px; }
 
 .header {
   transition: all .5s ease-in-out;
