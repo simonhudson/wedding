@@ -9,6 +9,10 @@ fieldset {
     text-rendering: optimizeLegibility;
 }
 
+html {
+    position: relative;
+}
+
 span, strong, em {
     font-family: inherit;
     font-size: inherit;

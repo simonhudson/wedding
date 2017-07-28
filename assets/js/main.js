@@ -73,3 +73,34 @@ function liveSearch() {
 }
 var liveSearchElement = document.querySelector('.js-live-search');
 if (liveSearchElement) liveSearchElement.addEventListener('keyup', liveSearch);
+
+function stickyTableHeader() {
+	const table = document.querySelector('.js-sticky-header');
+	if (!table) return;
+	const header = table.querySelector('thead');
+	const tablePositionY = table.offsetTop;
+	const stickyClass = 'is-sticky';
+
+	const checkScroll = () => {
+		const pageTop = window.pageYOffset;
+		console.log(tablePositionY);
+		console.log(pageTop);
+		if (pageTop >= tablePositionY) header.classList.add(stickyClass);
+		else header.classList.remove(stickyClass);
+	};
+	window.addEventListener('scroll', checkScroll);
+
+	// const elementTop = element.offsetTop;
+	// const checkScroll = () => {
+	// 	const scrollTop = window.pageYOffset;
+	// 	console.log(`elementTop: ${elementTop}`);
+	// 	console.log(`scrollTop: ${scrollTop}`);
+	// 	if (scrollTop >= elementTop) {
+	// 		element.classList.add('is-sticky');
+	// 	} else {
+	// 		element.classList.remove('is-sticky');
+	// 	}
+	// };
+	// window.addEventListener('scroll', checkScroll);
+};
+stickyTableHeader();

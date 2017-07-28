@@ -38,6 +38,9 @@ fieldset {
   padding: 0;
   text-rendering: optimizeLegibility; }
 
+html {
+  position: relative; }
+
 span, strong, em {
   font-family: inherit;
   font-size: inherit; }
@@ -519,6 +522,13 @@ select {
 .center-text {
   text-align: center; }
 
+.is-sticky {
+  width: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  position: fixed; }
+
 .btn {
   margin-bottom: 2rem;
   padding: 1rem;
@@ -559,6 +569,9 @@ select {
 table {
   width: 100%;
   border-collapse: collapse; }
+
+tr {
+  width: 100%; }
 
 th, td {
   padding: 1rem;

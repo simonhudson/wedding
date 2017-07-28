@@ -3,6 +3,10 @@ table {
 	border-collapse: collapse;
 }
 
+tr {
+	@include width-full();
+}
+
 th, td {
 	@include padding-xsm();
 	border-bottom: 1px solid rgba(palette(primary, bodyText), .10);
