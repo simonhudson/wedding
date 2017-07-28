@@ -25,7 +25,7 @@
 		</select>
 		<label for="guests-live-search">Search by name</label>
 		<input class="form-control js-live-search" data-data-source="guests-table" data-search-on="guest_name" id="guests-live-search" type="text" />
-
+		<?php include('includes/live-search-feedback.inc.php'); ?>
 		<table class="table guests-table">
 			<thead>
 				<tr>

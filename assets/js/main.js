@@ -1,16 +1,18 @@
 'use strict';
 
+const hiddenClass = 'visuallyhidden';
+
 const hasJs = () => {
 	document.querySelector('html').classList.add('has-js');
 };
 hasJs();
 
 const showElement = (element) => {
-	element.classList.remove('visuallyhidden');
+	element.classList.remove(hiddenClass);
 };
 
 const hideElement = (element) => {
-	element.classList.add('visuallyhidden');
+	element.classList.add(hiddenClass);
 };
 
 const toggleMainNav = (e) => {
@@ -51,6 +53,21 @@ function liveSearch() {
 	var dataRows = Array.from(dataSource.querySelector('tbody').querySelectorAll('tr'));
 	var searchOn = this.dataset.searchOn;
 	var inputValue = this.value;
+	var feedback = {
+		element: document.querySelector('.js-live-search__feedback'),
+		query: document.querySelector('.js-live-search__query'),
+		count: document.querySelector('.js-live-search__count')
+	};
+	const updateFeedback = () => {
+		let visibleRows = dataRows.filter(row => !row.classList.contains(hiddenClass)).length;
+		(inputValue.length || feedback.element.classList.contains(hiddenClass))
+			? feedback.element.classList.remove(hiddenClass)
+			: feedback.element.classList.add(hiddenClass);
+		feedback.query.textContent = inputValue;
+		feedback.count.textContent = visibleRows;
+	};
+	updateFeedback();
+
 	dataRows.forEach(function(row) {
 		if (inputValue) {
 			showElement(row);
@@ -61,9 +78,11 @@ function liveSearch() {
 			if (dataCell) {
 				if (cellValue.match(inputValueRegex)) {
 					showElement(row);
+					updateFeedback();
 				}
 				else {
 					hideElement(row);
+					updateFeedback();
 				}
 			}
 		} else {
@@ -73,34 +92,3 @@ function liveSearch() {
 }
 var liveSearchElement = document.querySelector('.js-live-search');
 if (liveSearchElement) liveSearchElement.addEventListener('keyup', liveSearch);
-
-function stickyTableHeader() {
-	const table = document.querySelector('.js-sticky-header');
-	if (!table) return;
-	const header = table.querySelector('thead');
-	const tablePositionY = table.offsetTop;
-	const stickyClass = 'is-sticky';
-
-	const checkScroll = () => {
-		const pageTop = window.pageYOffset;
-		console.log(tablePositionY);
-		console.log(pageTop);
-		if (pageTop >= tablePositionY) header.classList.add(stickyClass);
-		else header.classList.remove(stickyClass);
-	};
-	window.addEventListener('scroll', checkScroll);
-
-	// const elementTop = element.offsetTop;
-	// const checkScroll = () => {
-	// 	const scrollTop = window.pageYOffset;
-	// 	console.log(`elementTop: ${elementTop}`);
-	// 	console.log(`scrollTop: ${scrollTop}`);
-	// 	if (scrollTop >= elementTop) {
-	// 		element.classList.add('is-sticky');
-	// 	} else {
-	// 		element.classList.remove('is-sticky');
-	// 	}
-	// };
-	// window.addEventListener('scroll', checkScroll);
-};
-stickyTableHeader();
