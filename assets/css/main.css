@@ -596,6 +596,8 @@ th {
     @media (min-width: 768px) {
       .header__logo {
         height: auto; } }
+  .header__link {
+    border: 0; }
   .header__strap {
     font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
     font-weight: normal;

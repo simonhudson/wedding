@@ -33,6 +33,10 @@
 
 	}
 
+	&__link {
+		border:0;
+	}
+
 	&__strap {
 		@include strong();
 		@include uppercase();
