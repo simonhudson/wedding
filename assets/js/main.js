@@ -7,7 +7,7 @@ const hasJs = () => {
 };
 hasJs();
 
-const pluraliseString = (string, number) => (number !== 1) ? `${string}s` : string;
+const pluraliseString = (string, number, needsE = false) => (number !== 1) ? `${string}${needsE ? 'e' : ''}s` : string;
 
 const showElement = (element) => {
 	element.classList.remove(hiddenClass);
