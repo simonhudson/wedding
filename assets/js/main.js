@@ -7,6 +7,8 @@ const hasJs = () => {
 };
 hasJs();
 
+const pluraliseString = (string, number) => (number !== 1) ? `${string}s` : string;
+
 const showElement = (element) => {
 	element.classList.remove(hiddenClass);
 };
@@ -56,7 +58,8 @@ function liveSearch() {
 	var feedback = {
 		element: document.querySelector('.js-live-search__feedback'),
 		query: document.querySelector('.js-live-search__query'),
-		count: document.querySelector('.js-live-search__count')
+		count: document.querySelector('.js-live-search__count'),
+		pluralisation: document.querySelector('.js-live-search__pluralisation')
 	};
 	const updateFeedback = () => {
 		let visibleRows = dataRows.filter(row => !row.classList.contains(hiddenClass)).length;
@@ -65,6 +68,7 @@ function liveSearch() {
 			: feedback.element.classList.add(hiddenClass);
 		feedback.query.textContent = inputValue;
 		feedback.count.textContent = visibleRows;
+		feedback.pluralisation.textContent = pluraliseString('result', visibleRows);
 	};
 	updateFeedback();
 
