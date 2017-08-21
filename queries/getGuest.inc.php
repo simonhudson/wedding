@@ -2,15 +2,11 @@
 
 	function getGuest($guestId) {
 
-		include('includes/db.inc.php');
+		include($paths->includes.'includes/db.inc.php');
 
 		$query_getGuest =
 		"SELECT *
 		FROM guest
-		INNER JOIN seating
-		ON guest.table_id = seating.table_id
-		INNER JOIN meal
-		ON guest.meal_id = meal.meal_id
 		WHERE guest.guest_id=$guestId";
 
 		mysqli_query($db, $query_getGuest) or die('Error querying database. [getGuest]');

@@ -6,6 +6,7 @@ $paths = (object) array(
 	'css' 		=> $root.'assets/css/',
 	'js' 		=> $root.'assets/js/',
 	'imgs' 		=> $root.'assets/imgs/',
+	'includes'  => $root.'includes/',
 	'libs' 		=> $root.'assets/libs/'
 );
 ?>

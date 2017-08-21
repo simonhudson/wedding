@@ -1,4 +1,5 @@
 <?php
+include ('../functions/convertDataToJson.inc.php');
 include('getGuests.inc.php');
 include('getGuest.inc.php');
 include('getTables.inc.php');

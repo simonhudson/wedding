@@ -2,15 +2,12 @@
 
 	function getGuests() {
 
-		include('includes/db.inc.php');
+		include('../functions/convertDataToJson.inc.php');
+		include('../includes/db.inc.php');
 
 		$query_getGuests =
 		"SELECT *
 		FROM guest
-		INNER JOIN seating
-		ON guest.table_id = seating.table_id
-		INNER JOIN meal
-		ON guest.meal_id = meal.meal_id
 		ORDER BY guest.guest_id ASC";
 
 		mysqli_query($db, $query_getGuests) or die('Error querying database [getGuests].');
@@ -20,7 +17,8 @@
 
 		return (object) array(
 			'data' => $result_getGuests,
-			'count' => mysqli_num_rows($result_getGuests)
+			'count' => mysqli_num_rows($result_getGuests),
+			'json' => convertDataToJson($result_getGuests)
 		);
 
 	}
