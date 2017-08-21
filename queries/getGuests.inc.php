@@ -2,9 +2,9 @@
 
 	function getGuests() {
 
-		include('../functions/convertDataToJson.inc.php');
 		include('../includes/db.inc.php');
-
+		include('../functions/__import.inc.php');
+		
 		$query_getGuests =
 		"SELECT *
 		FROM guest

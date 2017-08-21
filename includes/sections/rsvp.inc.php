@@ -15,15 +15,6 @@
 				<label for="attendance-no">No, I will not be able to attend</label>
 			</div>
 		</fieldset>
-		<fieldset>
-			<legend>What would you like to eat?</legend>
-			<?php foreach (getMeals()->data as $meal): ?>
-				<div class="input-row">
-					<input id="meal-<?= $meal['meal_id']; ?>" name="rsvp-meal" type="radio" value="<?= $meal['meal_id']; ?>" />
-					<label for="meal-<?= $meal['meal_id']; ?>"><?= $meal['meal_description']; ?></label>
-				</div>
-			<?php endforeach; ?>
-		</fieldset>
 		<label for="rvsp-message">Any other message for the Bride &amp; Groom?</label>
 		<textarea id="rsvp-message"></textarea>
 	</fieldset>
