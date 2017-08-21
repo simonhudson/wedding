@@ -3,7 +3,6 @@
 	function getGuests() {
 
 		include('db.inc.php');
-		include('../functions/convertDataToJson.inc.php');
 
 		$query_getGuests =
 		"SELECT *
@@ -17,8 +16,7 @@
 
 		return (object) array(
 			'data' => $result_getGuests,
-			'count' => mysqli_num_rows($result_getGuests),
-			'json' => convertDataToJson($result_getGuests)
+			'count' => mysqli_num_rows($result_getGuests)
 		);
 
 	}

@@ -1,6 +1,7 @@
 <?php
 
 include('../queries/getGuests.inc.php');
-echo getGuests()->json;
+include('../functions/convertDataToJson.inc.php');
+echo convertDataToJson(getGuests()->data);
 
 ?>

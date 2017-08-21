@@ -1,7 +1,7 @@
 .hero {
 	@include transition();
 	align-items: center;
-	background: url($img-path + 'hero.png') no-repeat center 30%;
+	// background: url($img-path + 'hero.png') no-repeat center 30%;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
