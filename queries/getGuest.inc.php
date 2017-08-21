@@ -2,7 +2,7 @@
 
 	function getGuest($guestId) {
 
-		include($paths->includes.'includes/db.inc.php');
+		include('db.inc.php');
 
 		$query_getGuest =
 		"SELECT *

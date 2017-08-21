@@ -2,7 +2,7 @@
 
 	function getDateTime() {
 
-		include('includes/db.inc.php');
+		include('db.inc.php');
 
 		$query_getDateTime =
 		"SELECT *

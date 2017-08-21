@@ -2,7 +2,7 @@
 
 	function getChildren() {
 
-		include('includes/db.inc.php');
+		include('db.inc.php');
 
 		$query_getChildren =
 		"SELECT *

@@ -50,16 +50,18 @@ function doFilter() {
 var filter = document.querySelector('.js-filter');
 if (filter) filter.addEventListener('change', doFilter);
 
-function liveSearch() {
+function liveFilter() {
+	var namespace = 'js-live-filter';
 	var dataSource = document.querySelector('.' + this.dataset.dataSource);
 	var dataRows = Array.from(dataSource.querySelector('tbody').querySelectorAll('tr'));
+	if (!dataRows) return;
 	var searchOn = this.dataset.searchOn;
 	var inputValue = this.value;
 	var feedback = {
-		element: document.querySelector('.js-live-search__feedback'),
-		query: document.querySelector('.js-live-search__query'),
-		count: document.querySelector('.js-live-search__count'),
-		pluralisation: document.querySelector('.js-live-search__pluralisation')
+		element: document.querySelector('.' + namespace + '__feedback'),
+		query: document.querySelector('.' + namespace + '__query'),
+		count: document.querySelector('.' + namespace + '__count'),
+		pluralisation: document.querySelector('.' + namespace + '__pluralisation')
 	};
 	const updateFeedback = () => {
 		let visibleRows = dataRows.filter(row => !row.classList.contains(hiddenClass)).length;
@@ -94,5 +96,5 @@ function liveSearch() {
 		}
 	});
 }
-var liveSearchElement = document.querySelector('.js-live-search');
-if (liveSearchElement) liveSearchElement.addEventListener('keyup', liveSearch);
+var liveFilterElement = document.querySelector('.js-live-filter');
+if (liveFilterElement) liveFilterElement.addEventListener('keyup', liveFilter);

@@ -1,8 +1,8 @@
 <?php
-include('getChildren.inc.php');
-include('getDateTime.inc.php');
-include('getGuest.inc.php');
-include('getGuests.inc.php');
-include('getRelationship.inc.php');
-include('getVenue.inc.php');
+include_once('getChildren.inc.php');
+include_once('getDateTime.inc.php');
+include_once('getGuest.inc.php');
+include_once('getGuests.inc.php');
+include_once('getRelationship.inc.php');
+include_once('getVenue.inc.php');
 ?>

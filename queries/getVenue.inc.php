@@ -1,7 +1,7 @@
 <?php
 	function getVenue() {
 
-		include('includes/db.inc.php');
+		include('db.inc.php');
 
 		$query_getVenue =
 		"SELECT *

@@ -2,7 +2,7 @@
 
 	function getRelationship($relationship) {
 
-		include('includes/db.inc.php');
+		include('db.inc.php');
 
 		$query_getRelationship =
 		"SELECT *
