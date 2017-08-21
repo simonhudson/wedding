@@ -12,7 +12,6 @@
 		mysqli_query($db, $query_getRelationship) or die('Error querying database [getRelationship].');
 
 		$result_getRelationship = mysqli_query($db, $query_getRelationship);
-		$row_getRelationship = mysqli_fetch_array($result_getRelationship);
 
 		return (object) array(
 			'data' => $result_getRelationship,

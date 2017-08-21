@@ -1,55 +1,5 @@
 'use strict';
 
-const hiddenClass = 'visuallyhidden';
-
-const hasJs = () => {
-	document.querySelector('html').classList.add('has-js');
-};
-hasJs();
-
-const pluraliseString = (string, number, needsE = false) => (number !== 1) ? `${string}${needsE ? 'e' : ''}s` : string;
-
-const showElement = (element) => {
-	element.classList.remove(hiddenClass);
-};
-
-const hideElement = (element) => {
-	element.classList.add(hiddenClass);
-};
-
-const toggleMainNav = (e) => {
-	e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-	var nav = document.querySelector('.js-main-nav');
-	if (nav) {
-		var current = nav.style.display;
-		var value = !current || current === 'none' ? 'block' : 'none';
-		nav.style.display = value;
-	}
-};
-var navToggle = document.querySelector('.js-main-nav__toggle');
-if (navToggle) navToggle.addEventListener('click', toggleMainNav);
-
-function doFilter() {
-	var dataSource = document.querySelector('.' + this.dataset.dataSource);
-	var dataRows = Array.from(dataSource.querySelector('tbody').querySelectorAll('tr'));
-	var selectedOption = this.options[this.selectedIndex];
-	var filterBy = selectedOption.dataset.filterBy;
-	var filterValue = selectedOption.value;
-
-	// Loop through the table rows
-	dataRows.forEach(function(row) {
-		showElement(row);
-		var dataCell = row.querySelector('[headers="' + filterBy + '"]');
-		if (dataCell) {
-			var cellValue = dataCell.textContent;
-			if (cellValue !== filterValue) hideElement(row);
-		}
-	});
-
-}
-var filter = document.querySelector('.js-filter');
-if (filter) filter.addEventListener('change', doFilter);
-
 function liveFilter() {
 	var namespace = 'js-live-filter';
 	var dataSource = document.querySelector('.' + this.dataset.dataSource);

@@ -11,7 +11,6 @@
 		mysqli_query($db, $query_getDateTime) or die('Error querying database [getDateTime].');
 
 		$result_getDateTime = mysqli_query($db, $query_getDateTime);
-		$row_getDateTime = mysqli_fetch_array($result_getDateTime);
 
 		return (object) array(
 			'data' => $result_getDateTime,

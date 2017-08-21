@@ -1,11 +1,11 @@
 <?php
 
 	function convertDataToJson($data) {
-		$rows = array();
-		while($r = mysqli_fetch_assoc($data)) {
-			$rows[] = $r;
+		$return = array();
+		while($row = mysqli_fetch_assoc($data)) {
+			$return[] = $row;
 		}
-		return json_encode($rows);
+		return json_encode($return);
 	}
 
 ?>

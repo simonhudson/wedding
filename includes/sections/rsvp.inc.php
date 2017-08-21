@@ -4,6 +4,11 @@
 		<legend class="visuallyhidden">RSVP</legend>
 		<label class="visuallyhidden">Search for your name</label>
 		<input class="js-live-search__input" id="rsvp-name" placeholder="Search for your name" type="text" />
+
+		<ul class="js-live-search__suggestions">
+
+		</ul>
+
 		<fieldset>
 			<legend>Will you be able to join us?</legend>
 			<div class="input-row">
