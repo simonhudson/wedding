@@ -624,7 +624,7 @@ th {
           font-size: 2.2rem;
           padding-bottom: 0.71429rem; } }
   .ribbon:before, .ribbon:after {
-    border: 1.5em solid #986794;
+    border: 1.5em solid #4fe8bd;
     bottom: -1em;
     content: '';
     display: block;
@@ -639,7 +639,7 @@ th {
     border-right-color: transparent;
     right: -2em; }
   .ribbon-content:before, .ribbon-content:after {
-    border-color: #804f7c transparent transparent transparent;
+    border-color: #0c5f48 transparent transparent transparent;
     border-style: solid;
     bottom: -1em;
     content: '';

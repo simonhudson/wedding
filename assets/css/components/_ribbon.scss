@@ -33,7 +33,7 @@
 
     &:before,
     &:after {
-        border: 1.5em solid #986794;
+        border: 1.5em solid darken(palette(primary, a), 10%);
         bottom: -1em;
         content: '';
         display: block;
@@ -57,7 +57,7 @@
 
         &:before,
         &:after {
-            border-color: #804f7c transparent transparent transparent;
+            border-color: darken(palette(primary, a), 50%) transparent transparent transparent;
             border-style: solid;
             bottom: -1em;
             content: '';

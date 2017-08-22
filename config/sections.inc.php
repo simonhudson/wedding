@@ -1,13 +1,9 @@
 <?php
 $sections = (object) array(
 
-	'day' => (object) array(
-		'slug' => 'day',
-		'title' => 'The day'
-	),
-	'evening' => (object) array(
-		'slug' => 'evening',
-		'title' => 'The evening'
+	'when-where' => (object) array(
+		'slug' => 'when-where',
+		'title' => 'When &amp; where'
 	),
 	'travel' => (object) array(
 		'slug' => 'travel',
