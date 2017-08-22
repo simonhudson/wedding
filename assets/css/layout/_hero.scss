@@ -1,9 +1,32 @@
 .hero {
 	@include center-text();
 	@include transition();
-	background: rgba(palette(primary, a), .5);
+	// background: rgba(palette(primary, a), .5);
+	background: url($img-path + 'hero.png') no-repeat center 30%;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+
+	@include bp(tab-l) {
+		height: 300px;
+	}
+
+	&:before {
+		@include width-full();
+		@include position-tl();
+		background: palette(primary, a);
+		content: '';
+		display: block;
+		height: 100%;
+		opacity: 0.75;
+	}
 
 	span {
+		@include text-shadow();
+		color: #fff;
         display: block;
         font-size: rem($base-font-size * 1.2);
 

@@ -23,7 +23,7 @@
         content: '';
         display: block;
         position: absolute;
-        z-index: -1;
+        z-index: (index($z-index, 'hero-ribbon') - 3);
     }
 
     &:before {

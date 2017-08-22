@@ -1,7 +1,6 @@
 .section {
 	@include padding-sm();
 	background: #fff;
-	border-bottom: 1px solid rgba(palette(primary, bodyText), .15);
 
 	@include bp(tab-l) {
 		@include no-padding();
