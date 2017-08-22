@@ -606,23 +606,15 @@ th {
   background: #7ceece;
   color: #fff;
   font-size: 1.6rem;
-  margin: 2em auto 3em;
+  line-height: 2.2rem;
+  margin: 14px auto 56px;
   position: relative;
+  text-transform: uppercase;
   width: 80%; }
   @media (min-width: 1024px) {
     .ribbon {
       width: 50%;
       padding: 2rem; } }
-  .ribbon span {
-    display: block;
-    font-size: 1.2rem; }
-    .ribbon span:first-of-type {
-      font-size: 1.8rem;
-      padding-bottom: 0.35714rem; }
-      @media (min-width: 1024px) {
-        .ribbon span:first-of-type {
-          font-size: 2.2rem;
-          padding-bottom: 0.71429rem; } }
   .ribbon:before, .ribbon:after {
     border: 1.5em solid #4fe8bd;
     bottom: -1em;
@@ -766,39 +758,31 @@ main {
 
 .section {
   padding: 2rem;
-  background: #fff; }
+  background: #fff;
+  border-bottom: 1px solid rgba(87, 87, 87, 0.15); }
   @media (min-width: 1024px) {
     .section {
       padding: 0;
       padding-top: 4rem;
       padding-bottom: 4rem; } }
-  .section:nth-of-type(2n) {
-    background: rgba(124, 238, 206, 0.1); }
   @media (min-width: 1024px) {
     .section__wrap {
       width: 50%;
       margin: 0 auto; } }
 
 .hero {
+  text-align: center;
   transition: all .5s ease-in-out;
-  align-items: center;
-  background: rgba(124, 238, 206, 0.5);
-  display: flex;
-  justify-content: center;
-  position: relative; }
-  .hero__text {
-    padding: 2rem;
-    align-items: center;
-    background: #fff;
-    box-shadow: 5px 5px 0 #575757;
-    display: flex;
-    height: 50%;
-    justify-content: center; }
-  .hero__title {
-    text-align: center;
-    font-family: "england", serif;
-    margin: 0; }
-    .hero__title span {
-      display: block; }
+  background: rgba(124, 238, 206, 0.5); }
+  .hero span {
+    display: block;
+    font-size: 1.2rem; }
+    .hero span:first-of-type {
+      font-size: 1.8rem;
+      padding-bottom: 0.35714rem; }
+      @media (min-width: 1024px) {
+        .hero span:first-of-type {
+          font-size: 2.2rem;
+          padding-bottom: 0.71429rem; } }
 
 /*# sourceMappingURL=main.css.map */
