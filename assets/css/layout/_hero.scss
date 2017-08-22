@@ -11,7 +11,9 @@
 	&:before {
 		@include width-full();
 		@include position-tl();
-		background: url($img-path + 'hero.png') no-repeat center 30%;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($img-path + 'hero.png');
+		background-repeat: no-repeat;
+		background-position: center 30%;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
