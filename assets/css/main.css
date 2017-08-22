@@ -614,6 +614,7 @@ th {
   @media (min-width: 1024px) {
     .ribbon {
       width: 50%;
+      margin-bottom: 1rem;
       padding: 2rem; } }
   .ribbon:before, .ribbon:after {
     border: 1.5em solid #4fe8bd;
@@ -774,9 +775,6 @@ main {
   height: 100vh;
   position: relative;
   z-index: 2; }
-  @media (min-width: 1024px) {
-    .hero {
-      height: 300px; } }
   .hero:before {
     width: 100%;
     left: 0;
@@ -798,13 +796,28 @@ main {
     text-shadow: 1px 1px 1px #575757;
     color: #fff;
     display: block;
-    font-size: 1.2rem; }
-    .hero span:first-of-type {
+    font-size: 1.2rem;
+    padding: 0; }
+    > .hero span:first-of-type {
       font-size: 1.8rem;
       padding-bottom: 0.35714rem; }
       @media (min-width: 1024px) {
-        .hero span:first-of-type {
+        > .hero span:first-of-type {
           font-size: 2.2rem;
           padding-bottom: 0.71429rem; } }
+    .hero span.fa {
+      display: inline-block;
+      margin-right: 0.21429rem;
+      vertical-align: middle; }
+  .hero a {
+    font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+    font-weight: normal;
+    border: 0;
+    color: #fff; }
+  @media (min-width: 1024px) {
+    .hero {
+      height: 300px; }
+      .hero:before {
+        filter: blur() sepia(1); } }
 
 /*# sourceMappingURL=main.css.map */
