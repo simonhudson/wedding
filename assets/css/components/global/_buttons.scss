@@ -17,12 +17,14 @@
 	@include margin-b-sm();
 	@include padding-xsm();
 	@include strong();
+	@include text-shadow();
 	@include transition();
 	@include uppercase();
 	@include width-full();
 	background-color: palette(primary, a);
 	border-radius:3px;
-	border:0;
+	border: 0;
+	box-shadow: 2px 2px 5px rgba(palette(primary, bodyText), .25);
 	color:#fff;
 	cursor:pointer;
 	display:inline-block;
@@ -36,7 +38,7 @@
 
 	&:hover,
 	&:focus {
-		background-color: darken(palette(primary, a), 10%);
+		box-shadow: 2px 2px 5px rgba(palette(primary, bodyText), .65);
 		color:#fff;
 		text-decoration: none;
 	}

@@ -1,29 +1,20 @@
 .hero {
 	@include transition();
 	align-items: center;
-	// background: url($img-path + 'hero.png') no-repeat center 30%;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-	background-size: cover;
+	background: rgba(palette(primary, a), .5);
 	display: flex;
-	height: 200px;
 	justify-content: center;
 	position: relative;
 
-	@include bp(tab-l) {
-		height: 400px;
-	}
-
-	&:after {
-		@include width-full();
-		@include position-tl();
-		background: #fff;
-		content:'';
-		display: block;
-		height:100%;
-		opacity: 0.5;
-	}
+	// &:after {
+	// 	@include width-full();
+	// 	@include position-tl();
+	// 	background: #fff;
+	// 	content:'';
+	// 	display: block;
+	// 	height:100%;
+	// 	opacity: 0.5;
+	// }
 
 	&__text {
 		@include padding-sm();

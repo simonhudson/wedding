@@ -24,3 +24,7 @@
 @mixin small() {
 	font-size: rem($base-font-size * 0.85);
 }
+
+@mixin text-shadow() {
+	text-shadow: 1px 1px 1px palette(primary, bodyText);
+}

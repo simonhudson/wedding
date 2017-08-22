@@ -13,17 +13,3 @@
 		</style>
 	</head>
 	<body>
-
-		<header class="header">
-			<div class="wrap header__wrap">
-				<div class="header__logo">
-					<a class="header__link" href="<?= $root; ?>">
-						<img alt="" src="http://via.placeholder.com/200x75" />
-					</a>
-				</div>
-				<button class="js-main-nav__toggle main-nav__toggle">
-					Menu
-				</button>
-				<?php include('includes/main-nav.inc.php'); ?>
-			</div>
-		</header>

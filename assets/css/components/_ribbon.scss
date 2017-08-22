@@ -1,0 +1,80 @@
+.ribbon {
+    @include center-text();
+    @include padding-xsm();
+    @include text-shadow();
+    background: palette(primary, a);
+    color: #fff;
+    font-size: rem($base-font-size * 1.6);
+    margin: 2em auto 3em;
+    position: relative;
+    width: 80%;
+
+    @include bp(tab-l) {
+        @include width-half();
+        @include padding-sm();
+    }
+
+    span {
+        display: block;
+        font-size: rem($base-font-size * 1.2);
+
+        &:first-of-type {
+            font-size: rem($base-font-size * 1.8);
+            padding-bottom: rem(5px);
+
+            @include bp(tab-l) {
+                font-size: rem($base-font-size * 2.2);
+                padding-bottom: rem(10px);
+            }
+
+        }
+
+    }
+
+    &:before,
+    &:after {
+        border: 1.5em solid #986794;
+        bottom: -1em;
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &:before {
+        border-left-color: transparent;
+        border-right-width: 1.5em;
+        left: -2em;
+    }
+
+    &:after {
+        border-left-width: 1.5em;
+        border-right-color: transparent;
+        right: -2em;
+    }
+
+    &-content {
+
+        &:before,
+        &:after {
+            border-color: #804f7c transparent transparent transparent;
+            border-style: solid;
+            bottom: -1em;
+            content: '';
+            display: block;
+            position: absolute;
+        }
+
+        &:before {
+            border-width: 1em 0 0 1em;
+            left: 0;
+        }
+
+        &:after {
+            border-width: 1em 1em 0 0;
+            right: 0;
+        }
+
+    }
+
+}
