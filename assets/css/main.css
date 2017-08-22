@@ -772,13 +772,9 @@ main {
 .hero {
   text-align: center;
   transition: all .5s ease-in-out;
-  background: url("_assets/imgs/hero.png") no-repeat center 30%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 100vh;
-  position: relative; }
+  position: relative;
+  z-index: 2; }
   @media (min-width: 1024px) {
     .hero {
       height: 300px; } }
@@ -787,11 +783,16 @@ main {
     left: 0;
     position: absolute;
     top: 0;
-    background: #7ceece;
+    background: url("_assets/imgs/hero.png") no-repeat center 30%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     content: '';
     display: block;
+    filter: blur(2px) sepia(1);
     height: 100%;
-    opacity: 0.75; }
+    z-index: -1; }
   .hero span {
     text-shadow: 1px 1px 1px #575757;
     color: #fff;

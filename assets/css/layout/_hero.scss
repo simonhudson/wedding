@@ -2,13 +2,9 @@
 	@include center-text();
 	@include transition();
 	// background: rgba(palette(primary, a), .5);
-	background: url($img-path + 'hero.png') no-repeat center 30%;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-	background-size: cover;
 	height: 100vh;
 	position: relative;
+	z-index: index($z-index, 'hero-image') + 1;
 
 	@include bp(tab-l) {
 		height: 300px;
@@ -17,11 +13,16 @@
 	&:before {
 		@include width-full();
 		@include position-tl();
-		background: palette(primary, a);
+		background: url($img-path + 'hero.png') no-repeat center 30%;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+		background-size: cover;
 		content: '';
 		display: block;
+		filter: blur(2px) sepia(1);
 		height: 100%;
-		opacity: 0.75;
+		z-index: index($z-index, 'hero-image') - 2;
 	}
 
 	span {
