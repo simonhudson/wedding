@@ -771,7 +771,6 @@ main {
 
 .hero {
   text-align: center;
-  transition: all .5s ease-in-out;
   height: 100vh;
   position: relative;
   z-index: 2; }

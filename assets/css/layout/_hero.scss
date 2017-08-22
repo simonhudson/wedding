@@ -1,7 +1,5 @@
 .hero {
 	@include center-text();
-	@include transition();
-	// background: rgba(palette(primary, a), .5);
 	height: 100vh;
 	position: relative;
 	z-index: index($z-index, 'hero-image') + 1;
