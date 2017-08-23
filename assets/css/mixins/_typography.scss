@@ -26,5 +26,5 @@
 }
 
 @mixin text-shadow() {
-	text-shadow: 1px 1px 1px palette(primary, bodyText);
+	text-shadow: 0 0 7px palette(primary, bodyText);
 }
