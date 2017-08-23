@@ -1,6 +1,7 @@
 .hero {
 	@include center-text();
 	align-items: center;
+	background: palette(primary, bodyText);
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
