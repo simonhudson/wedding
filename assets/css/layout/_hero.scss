@@ -1,9 +1,11 @@
 .hero {
 	@include center-text();
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 	height: 100vh;
 	position: relative;
 	z-index: index($z-index, 'hero-image') + 1;
-
 
 	&:before {
 		@include width-full();
@@ -22,36 +24,47 @@
 		z-index: index($z-index, 'hero-image') - 2;
 	}
 
-	span {
+	&__info {
 		@include text-shadow();
-		color: #fff;
+		@include uppercase();
         display: block;
         font-size: rem($base-font-size * 1.2);
+		line-height: rem($base-font-size * 1.8);
 		padding:0;
 
-        > &:first-of-type {
-            font-size: rem($base-font-size * 1.8);
-            padding-bottom: rem(5px);
+		h2 {
+			color: #fff;
+		}
 
-            @include bp(tab-l) {
-                font-size: rem($base-font-size * 2.2);
-                padding-bottom: rem(10px);
-            }
+		span {
+			display: block;
+			font-size: rem($base-font-size * 1.1);
 
-        }
+			&:first-of-type {
+	            font-size: rem($base-font-size * 1.8);
+	            padding-bottom: rem(10px);
 
-		&.fa {
+	            @include bp(tab-l) {
+	                font-size: rem($base-font-size * 2.2);
+	                padding-bottom: rem(10px);
+	            }
+
+	        }
+
+		}
+
+		.fa {
 			display: inline-block;
 			margin-right: rem(3px);
 			vertical-align: middle;
 		}
 
-    }
+		a {
+			@include strong();
+			border:0;
+			color: #fff;
+		}
 
-	a {
-		@include strong();
-		border:0;
-		color: #fff;
 	}
 
 	@include bp(tab-l) {
