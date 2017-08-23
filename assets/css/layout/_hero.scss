@@ -42,6 +42,7 @@
 
 			&:first-of-type {
 	            font-size: rem($base-font-size * 1.8);
+				letter-spacing: 2px;
 	            padding-bottom: rem(10px);
 
 	            @include bp(tab-l) {

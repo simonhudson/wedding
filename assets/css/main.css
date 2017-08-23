@@ -135,7 +135,6 @@ h1, .faux-h1 {
   color: #575757;
   font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
   font-weight: 300;
-  letter-spacing: 1px;
   line-height: 1.4em;
   margin-bottom: 1em;
   font-size: 2rem; }
@@ -147,7 +146,6 @@ h2, .faux-h2 {
   color: #575757;
   font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
   font-weight: 300;
-  letter-spacing: 1px;
   line-height: 1.4em;
   margin-bottom: 1em;
   font-size: 1.8rem; }
@@ -159,7 +157,6 @@ h3, .faux-h3 {
   color: #575757;
   font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
   font-weight: 300;
-  letter-spacing: 1px;
   line-height: 1.4em;
   margin-bottom: 1em;
   font-size: 1.6rem; }
@@ -171,7 +168,6 @@ h4, .faux-h4 {
   color: #575757;
   font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
   font-weight: 300;
-  letter-spacing: 1px;
   line-height: 1.4em;
   margin-bottom: 1em;
   font-size: 1.4rem; }
@@ -183,7 +179,6 @@ h5, .faux-h5 {
   color: #575757;
   font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
   font-weight: 300;
-  letter-spacing: 1px;
   line-height: 1.4em;
   margin-bottom: 1em;
   font-size: 1.2rem; }
@@ -195,7 +190,6 @@ h6, .faux-h6 {
   color: #575757;
   font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
   font-weight: 300;
-  letter-spacing: 1px;
   line-height: 1.4em;
   margin-bottom: 1em;
   font-size: 1rem; }
@@ -236,7 +230,6 @@ legend {
   color: #575757;
   font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
   font-weight: 300;
-  letter-spacing: 1px;
   line-height: 1.4em;
   margin-bottom: 1em;
   font-size: 1.6rem; }
@@ -711,7 +704,8 @@ th {
     border-right-color: transparent;
     right: -2em; }
   .ribbon-content {
-    font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif; }
+    font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+    letter-spacing: 1px; }
     .ribbon-content:before, .ribbon-content:after {
       border-color: #0c5f48 transparent transparent transparent;
       border-style: solid;
@@ -890,6 +884,7 @@ main {
       font-size: 1.1rem; }
       .hero__info span:first-of-type {
         font-size: 1.8rem;
+        letter-spacing: 2px;
         padding-bottom: 0.71429rem; }
         @media (min-width: 1024px) {
           .hero__info span:first-of-type {
