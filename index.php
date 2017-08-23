@@ -2,7 +2,7 @@
 
 	<?php include('includes/hero.inc.php'); ?>
 
-	<?php foreach($sections as $section): ?>
+	<?php $showSections = false; if ($showSections) foreach($sections as $section): ?>
 		<section class="section" id="<?= $section->slug; ?>">
 			<div class="wrap section__wrap">
 				<h2><?= $section->title; ?></h2>
