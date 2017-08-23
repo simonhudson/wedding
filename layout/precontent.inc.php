@@ -2,7 +2,7 @@
 <?php include('functions/__import.inc.php'); ?>
 <?php include('queries/__import.inc.php'); ?>
 <!doctype html>
-<html id="top">
+<html id="top" lang="en">
 	<head>
 		<title><?= $sitename; ?> &mdash; <?= formatDateTime(); ?></title>
 		<meta charset="utf-8" />

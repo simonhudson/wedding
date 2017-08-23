@@ -1,7 +1,7 @@
 <form class="rsvp js-live-search">
 	<fieldset>
 		<legend class="visuallyhidden">RSVP</legend>
-		<label class="visuallyhidden">Search for your name</label>
+		<label class="visuallyhidden" for="rsvp-name">Search for your name</label>
 		<input class="js-live-search__input" id="rsvp-name" placeholder="Search for your name" type="text" />
 
 		<ul class="js-live-search__suggestions">
@@ -19,7 +19,7 @@
 				<label for="attendance-no">No, I will not be able to attend</label>
 			</div>
 		</fieldset>
-		<label for="rvsp-message">Any other message for the Bride &amp; Groom?</label>
+		<label for="rsvp-message">Any other message for the Bride &amp; Groom?</label>
 		<textarea id="rsvp-message"></textarea>
 	</fieldset>
 	<input class="btn btn--primary" type="submit" value="Send" />
