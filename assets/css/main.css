@@ -96,9 +96,9 @@
 *,
 fieldset {
   box-sizing: border-box;
-  font-family: "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_light", arial, helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility; }
@@ -121,7 +121,7 @@ p,
 
 strong,
 .strong {
-  font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_regular", "opensans_light", arial, helvetica, sans-serif;
   font-weight: normal; }
 
 small,
@@ -131,9 +131,14 @@ small,
 .script {
   font-family: "england", serif; }
 
+.flourish {
+  font-family: georgia, "times new roman", serif;
+  font-style: italic;
+  letter-spacing: normal; }
+
 h1, .faux-h1 {
   color: #575757;
-  font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_light", arial, helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.4em;
   margin-bottom: 1em;
@@ -144,7 +149,7 @@ h1, .faux-h1 {
 
 h2, .faux-h2 {
   color: #575757;
-  font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_light", arial, helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.4em;
   margin-bottom: 1em;
@@ -155,7 +160,7 @@ h2, .faux-h2 {
 
 h3, .faux-h3 {
   color: #575757;
-  font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_light", arial, helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.4em;
   margin-bottom: 1em;
@@ -166,7 +171,7 @@ h3, .faux-h3 {
 
 h4, .faux-h4 {
   color: #575757;
-  font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_light", arial, helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.4em;
   margin-bottom: 1em;
@@ -177,7 +182,7 @@ h4, .faux-h4 {
 
 h5, .faux-h5 {
   color: #575757;
-  font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_light", arial, helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.4em;
   margin-bottom: 1em;
@@ -188,7 +193,7 @@ h5, .faux-h5 {
 
 h6, .faux-h6 {
   color: #575757;
-  font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_light", arial, helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.4em;
   margin-bottom: 1em;
@@ -228,7 +233,7 @@ fieldset {
 
 legend {
   color: #575757;
-  font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_light", arial, helvetica, sans-serif;
   font-weight: 300;
   line-height: 1.4em;
   margin-bottom: 1em;
@@ -240,7 +245,7 @@ legend {
 label,
 .faux-label,
 .input-error-label {
-  font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_regular", "opensans_light", arial, helvetica, sans-serif;
   font-weight: normal;
   display: block;
   font-size: 1rem;
@@ -352,7 +357,7 @@ select {
   .input-error-msg {
     color: red;
     display: block;
-    font-weight: 400; }
+    font-weight: 300; }
 
 .visuallyhidden {
   clip: rect(0 0 0 0);
@@ -601,10 +606,13 @@ select {
   top: 0;
   position: fixed; }
 
+.circle {
+  clip-path: circle(40% at center); }
+
 .btn {
   margin-bottom: 2rem;
   padding: 1rem;
-  font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_regular", "opensans_light", arial, helvetica, sans-serif;
   font-weight: normal;
   text-shadow: 0 0 7px #575757;
   transition: all .5s ease-in-out;
@@ -653,7 +661,7 @@ th, td {
   text-align: left; }
 
 th {
-  font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_regular", "opensans_light", arial, helvetica, sans-serif;
   font-weight: normal;
   background: rgba(124, 238, 206, 0.1);
   border-width: 2px; }
@@ -704,7 +712,7 @@ th {
     border-right-color: transparent;
     right: -2em; }
   .ribbon-content {
-    font-family: "league_spartan", "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+    font-family: "league_spartan", "opensans_regular", "opensans_light", arial, helvetica, sans-serif;
     letter-spacing: 1px; }
     .ribbon-content:before, .ribbon-content:after {
       border-color: #0c5f48 transparent transparent transparent;
@@ -749,7 +757,7 @@ th {
   .header__link {
     border: 0; }
   .header__strap {
-    font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+    font-family: "opensans_regular", "opensans_light", arial, helvetica, sans-serif;
     font-weight: normal;
     text-transform: uppercase;
     color: #7ceece;
@@ -819,7 +827,7 @@ main {
 .main-nav__link {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+  font-family: "opensans_regular", "opensans_light", arial, helvetica, sans-serif;
   font-weight: normal;
   border-bottom: 1px solid rgba(87, 87, 87, 0.15);
   color: #575757;
@@ -848,29 +856,18 @@ main {
 .hero {
   text-align: center;
   align-items: center;
-  background: #575757;
+  background: #fff;
   display: flex;
   flex-direction: column;
   height: 100vh;
   position: relative;
   z-index: 2; }
-  .hero:before {
-    width: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("_assets/imgs/hero.png");
-    background-repeat: no-repeat;
-    background-position: center 30%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    content: '';
-    display: block;
-    filter: blur(2px) sepia(1);
-    height: 100%;
-    z-index: -1; }
+  .hero__heading {
+    text-transform: uppercase; }
+  .hero__img {
+    clip-path: circle(40% at center);
+    height: auto;
+    width: 350px; }
   .hero__info {
     text-shadow: 0 0 7px #575757;
     text-transform: uppercase;
@@ -896,7 +893,7 @@ main {
       margin-right: 0.21429rem;
       vertical-align: middle; }
     .hero__info a {
-      font-family: "opensans_semibold", "opensans_regular", arial, helvetica, sans-serif;
+      font-family: "opensans_regular", "opensans_light", arial, helvetica, sans-serif;
       font-weight: normal;
       border: 0;
       color: #fff; }

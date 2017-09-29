@@ -1,3 +1,3 @@
 <?php
-$sitename = 'Jodie &amp; Simon are getting married!';
+$sitename = 'Jodie &amp; Simon';
 ?>

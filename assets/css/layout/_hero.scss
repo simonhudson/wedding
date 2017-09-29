@@ -1,29 +1,39 @@
 .hero {
 	@include center-text();
 	align-items: center;
-	background: palette(primary, bodyText);
+	background: #fff;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 	position: relative;
 	z-index: index($z-index, 'hero-image') + 1;
 
-	&:before {
-		@include width-full();
-		@include position-tl();
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($img-path + 'hero.png');
-		background-repeat: no-repeat;
-		background-position: center 30%;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-		background-size: cover;
-		content: '';
-		display: block;
-		filter: blur(2px) sepia(1);
-		height: 100%;
-		z-index: index($z-index, 'hero-image') - 2;
+	&__heading {
+		text-transform: uppercase;
 	}
+
+	&__img {
+		@include circle();
+		height:auto;
+		width:350px;
+	}
+
+	// &:before {
+	// 	@include width-full();
+	// 	@include position-tl();
+	// 	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($img-path + 'hero.png');
+	// 	background-repeat: no-repeat;
+	// 	background-position: center 30%;
+	// 		-webkit-background-size: cover;
+	// 		-moz-background-size: cover;
+	// 		-o-background-size: cover;
+	// 	background-size: cover;
+	// 	content: '';
+	// 	display: block;
+	// 	filter: blur(2px) sepia(1);
+	// 	height: 100%;
+	// 	z-index: index($z-index, 'hero-image') - 2;
+	// }
 
 	&__info {
 		@include text-shadow();
