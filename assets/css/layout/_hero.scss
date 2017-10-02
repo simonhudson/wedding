@@ -9,6 +9,8 @@
 	z-index: index($z-index, 'hero-image') + 1;
 
 	&__heading {
+		font-size: rem($base-font-size * 2);
+		letter-spacing: $spacing * 0.5;
 		text-transform: uppercase;
 	}
 
